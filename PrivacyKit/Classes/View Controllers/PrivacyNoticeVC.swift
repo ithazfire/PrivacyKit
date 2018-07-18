@@ -10,9 +10,8 @@ import UIKit
 class PrivacyNoticeVC: UIViewController {
 
     /** Core Data Interface Model */
+    let manager = PrivacyKit.shared
     let privacyModel = PrivacyModel()
-    
-    /** Defaults for Messages */
 
     /** UI Statics */
     let padding: CGFloat = 15
@@ -20,12 +19,12 @@ class PrivacyNoticeVC: UIViewController {
     /** General Views */
     let backgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 37/255, green: 39/255, blue: 46/255, alpha: 1)
+        view.backgroundColor = PrivacyKitUI.colors.background
         return view
     }()
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = PrivacyKitUI.colors.basic
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.text = "Privacy Notice"
         return label
@@ -38,21 +37,11 @@ class PrivacyNoticeVC: UIViewController {
         label.isEditable = false
         return label
     }()
-    
-    /** Text View Attributes */
-    let privacyTextAttr: [String: Any] = [
-        NSAttributedStringKey.font.rawValue: UIFont.systemFont(ofSize: 13),
-        NSAttributedStringKey.foregroundColor.rawValue: UIColor.white
-    ]
-    let privacyLinkTextAttr: [String: Any] = [
-        NSAttributedStringKey.font.rawValue: UIFont.boldSystemFont(ofSize: 13),
-        NSAttributedStringKey.foregroundColor.rawValue: UIColor.white
-    ]
-    
+
     /** Action Buttons */
     let agreeButton: UIButton = {
         let button = UIButton()
-        button.tintColor = .white
+        button.setTitleColor(PrivacyKitUI.colors.basic, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.addTarget(self, action: #selector(PrivacyNoticeVC.agreePrivacy), for: .touchUpInside)
         button.setTitle("Agree", for: .normal)
@@ -61,7 +50,7 @@ class PrivacyNoticeVC: UIViewController {
     }()
     let denyButton: UIButton = {
         let button = UIButton()
-        button.tintColor = .white
+        button.setTitleColor(PrivacyKitUI.colors.basic, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.addTarget(self, action: #selector(PrivacyNoticeVC.denyPrivacy), for: .touchUpInside)
         button.setTitle("Deny", for: .normal)
@@ -71,17 +60,32 @@ class PrivacyNoticeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        descriptionTextView.attributedText = PrivacyKit.shared.getDescription()
+        
+        view.addSubview(backgroundView)
+        view.addSubview(titleLabel)
+        view.addSubview(descriptionTextView)
+        view.addSubview(agreeButton)
+        
+        if manager.includeDeny {
+            view.addSubview(denyButton)
+        }
     }
 
     /** Action Functions */
     @objc func agreePrivacy() {
+        // ADD Agree Handling
         
+        self.dismiss(animated: true, completion: nil)
     }
 
     @objc func denyPrivacy() {
+        // ADD Deny Handling
         
+        
+        self.dismiss(animated: true, completion: nil)
     }
+
 
 }
