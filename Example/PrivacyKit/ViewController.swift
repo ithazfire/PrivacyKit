@@ -7,18 +7,34 @@
 //
 
 import UIKit
+import PrivacyKit
 
 class ViewController: UIViewController {
 
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 32)
+        label.textColor = .black
+        label.text = "PrivacyKit"
+        label.sizeToFit()
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.addSubview(titleLabel)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // self.requirePrivacy()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidLayoutSubviews() {
+        titleLabel.frame = CGRect(x: (view.frame.width - titleLabel.frame.width) / 2,
+                                  y: (view.frame.height - titleLabel.frame.height) / 2,
+                                  width: titleLabel.frame.width,
+                                  height: titleLabel.frame.height)
     }
-
 }
 
