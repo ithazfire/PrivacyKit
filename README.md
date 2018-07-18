@@ -9,7 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![Basic Example Screenshot](https://github.com/ithazfire/PrivacyKit/wiki/img/basic_example.png "Privacy Kit Example")
+<img src="https://github.com/ithazfire/PrivacyKit/wiki/img/basic_example.png" alt="Basic Example Screenshot" width="376px"/>
 
 ## Installation
 
