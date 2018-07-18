@@ -36,11 +36,5 @@ class PrivacyModel {
     
     func save() {
         privacy?.setValue(privacyAccepted, forKey: "privacyAccepted")
-        
-        do {
-            //
-        } catch {
-            
-        }
     }
 }
