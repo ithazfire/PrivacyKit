@@ -1,0 +1,6 @@
+framework module Pods_PrivacyKit_Tests {
+  umbrella header "Pods-PrivacyKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
