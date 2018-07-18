@@ -1,6 +1,6 @@
 # PrivacyKit
 
-[![CI Status](https://img.shields.io/travis/Archdoog/PrivacyKit.svg?style=flat)](https://travis-ci.org/Archdoog/PrivacyKit)
+[![CI Status](https://img.shields.io/travis/Archdoog/PrivacyKit.svg?style=flat)](https://travis-ci.org/ithazfire/PrivacyKit/settings)
 [![Version](https://img.shields.io/cocoapods/v/PrivacyKit.svg?style=flat)](https://cocoapods.org/pods/PrivacyKit)
 [![License](https://img.shields.io/cocoapods/l/PrivacyKit.svg?style=flat)](https://cocoapods.org/pods/PrivacyKit)
 [![Platform](https://img.shields.io/cocoapods/p/PrivacyKit.svg?style=flat)](https://cocoapods.org/pods/PrivacyKit)
@@ -9,7 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+![Basic Example Screenshot](https://github.com/ithazfire/PrivacyKit/wiki/img/basic_example.png "Privacy Kit Example")
 
 ## Installation
 
@@ -22,7 +22,7 @@ pod 'PrivacyKit'
 
 ## Author
 
-Archdoog, jf0517@gmail.com
+[Archdoog](https://github.com/Archdoog)
 
 ## License
 
