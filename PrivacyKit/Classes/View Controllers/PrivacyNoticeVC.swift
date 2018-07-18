@@ -75,7 +75,7 @@ class PrivacyNoticeVC: UIViewController {
         
     }
 
-    /** Action Function s*/
+    /** Action Functions */
     @objc func agreePrivacy() {
         
     }

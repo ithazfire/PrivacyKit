@@ -11,9 +11,10 @@ import PrivacyKit
 
 class ViewController: UIViewController {
 
+    let verticalOffset: CGFloat = 128
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 32)
+        label.font = UIFont.boldSystemFont(ofSize: 36)
         label.textColor = .black
         label.text = "PrivacyKit"
         label.sizeToFit()
@@ -27,12 +28,12 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // self.requirePrivacy()
+        self.requirePrivacy()
     }
 
     override func viewDidLayoutSubviews() {
         titleLabel.frame = CGRect(x: (view.frame.width - titleLabel.frame.width) / 2,
-                                  y: (view.frame.height - titleLabel.frame.height) / 2,
+                                  y: (view.frame.height - titleLabel.frame.height) / 2 - verticalOffset,
                                   width: titleLabel.frame.width,
                                   height: titleLabel.frame.height)
     }

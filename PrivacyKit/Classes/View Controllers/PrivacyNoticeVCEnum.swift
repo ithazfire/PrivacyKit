@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PrivacyNoticeType {
+public enum PrivacyNoticeType {
     case top
     case bottom
     case center

@@ -1,5 +1,5 @@
 //
-//  PrivacyManager.swift
+//  PrivacyKit.swift
 //  FBSnapshotTestCase
 //
 //  Created by Jacob Fielding on 7/18/18.
@@ -7,14 +7,12 @@
 
 import Foundation
 
-class PrivacyManager {
+public class PrivacyKit {
+    
+    static let shared = PrivacyKit()
     
     /** Data Model */
     let privacyModel = PrivacyModel()
-    
-    /** View Controller Setup */
-    var privacyNoticeVCType: PrivacyNoticeType = .alert
-    var privacyNoticeVC: PrivacyNoticeVC?
     
     /** Default Data */
     var privacyDescrtionParts: [String]?
@@ -26,10 +24,10 @@ class PrivacyManager {
     var termsOfServiceLink: String?
     var includeDeny: Bool = false
     
-    init(viewType: PrivacyNoticeType) {
-        self.privacyNoticeVCType = viewType
-        
+    public init() {
         /** Split the Default Privacy Message */
+        privacyModel.buildDefaults()
+        
         self.splitPrivacyMessage()
     }
     

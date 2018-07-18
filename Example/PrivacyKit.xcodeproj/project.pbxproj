@@ -28,8 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		43DBA13BBFBC97D64AA7C997 /* PrivacyKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyKit.podspec; path = ../PrivacyKit.podspec; sourceTree = "<group>"; };
-		558B6ACB578E661CF7FDF219 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		43DBA13BBFBC97D64AA7C997 /* PrivacyKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PrivacyKit.podspec; path = ../PrivacyKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		558B6ACB578E661CF7FDF219 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5859371307E0B6DBBBD76B59 /* Pods-PrivacyKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivacyKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrivacyKit_Tests/Pods-PrivacyKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PrivacyKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivacyKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		73393959EAD94E5CAD7F3002 /* Pods-PrivacyKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivacyKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrivacyKit_Example/Pods-PrivacyKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		761D634DAE5D7A254DE353ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		761D634DAE5D7A254DE353ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7B0EA36005BDBEC857291096 /* Pods-PrivacyKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivacyKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrivacyKit_Example/Pods-PrivacyKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B07E80B539C9118F9529BDE2 /* Pods_PrivacyKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivacyKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9EB96E4F26F2114F093037E /* Pods_PrivacyKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivacyKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };

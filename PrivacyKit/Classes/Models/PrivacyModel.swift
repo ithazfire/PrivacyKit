@@ -5,13 +5,19 @@
 //  Created by Jacob Fielding on 7/18/18.
 //
 
+import Foundation
 import CoreData
 
 class PrivacyModel {
     
     /** Core Data Specifications */
-    //fileprivate let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    fileprivate var settings: Privacy?
+    lazy var managedObjectModel: NSManagedObjectModel = {
+        let privacyKitBundle = Bundle(identifier: "com.ithazfire.PrivacyKit")
+        
+        let modelURL = privacyKitBundle!.url(forResource: "Privacy", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOf: modelURL)!
+    }()
+    fileprivate var privacy: Privacy?
     
     /** Data Keys */
     var privacyAccepted: Bool = false
@@ -29,6 +35,12 @@ class PrivacyModel {
     }
     
     func save() {
+        privacy?.setValue(privacyAccepted, forKey: "privacyAccepted")
         
+        do {
+            //
+        } catch {
+            
+        }
     }
 }
