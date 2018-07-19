@@ -36,7 +36,6 @@ public class PrivacyKit {
     var termsOfServiceLink: String?
     var includeDeny: Bool = true
     
-    
     init() {
         /** Split the Default Privacy Message */
         privacyModel.buildDefaults()

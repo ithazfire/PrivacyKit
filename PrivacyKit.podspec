@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-s.source_files = 'PrivacyKit/Classes/**/*.{h,m,swift,xcdatamodeld}'
+  s.source_files = 'PrivacyKit/Classes/**/*.{h,m,swift,xcdatamodeld}'
   s.resources = 'PrivacyKit/Classes/Models/*.xcdatamodeld'
   
   # s.resource_bundles = {

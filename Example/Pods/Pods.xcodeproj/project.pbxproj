@@ -16,8 +16,8 @@
 		0B5E5B15EB581247AB7ED9FFBC2EF56C /* AlertNoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80C87641EF4FFF2E12C25938EBE0F5 /* AlertNoticeVC.swift */; };
 		159040B37D159CFBE40417EAA4722168 /* QuickSelectedTestSuiteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC8B203A9973AF61F939CF61D619C41 /* QuickSelectedTestSuiteBuilder.swift */; };
 		1614ADC8174304BC8777578B4B850524 /* PrivacyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7E0E9F3EFA2758D9E3D4401E9F7E106 /* PrivacyDataModel.xcdatamodeld */; };
+		1631202520FFECAD00F5B977 /* PrivacyKitDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1699B54320FFE1A2006D9D35 /* PrivacyKitDescription.swift */; };
 		1699B54220FFD9E9006D9D35 /* PrivacyKitUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1699B54020FFD6E1006D9D35 /* PrivacyKitUI.swift */; };
-		1699B54420FFE1A2006D9D35 /* PrivacyKitDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1699B54320FFE1A2006D9D35 /* PrivacyKitDescription.swift */; };
 		17C8EE7DF3F57C8F99EAF63C6E61EA99 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C764AC540C4E0FE3477F5F61F53C36 /* FailureMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		185465CD243E070EF95F676DD457D52A /* QuickConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 486BEA084A74A7D96BBC96B4F7CCF311 /* QuickConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18EA4E0D8B74F2B2BBF8F39B49F49BF9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C5092E7187F4E8B59FED95067511E3 /* XCTest.framework */; };
@@ -262,7 +262,7 @@
 		15E0FC3DDBE6EC3494B44EF353CDE8ED /* PrivacyNoticeVCEnum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrivacyNoticeVCEnum.swift; sourceTree = "<group>"; };
 		162F9491190264048BD2A6E7CD8D9A07 /* CwlCatchException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlCatchException.h; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h; sourceTree = "<group>"; };
 		1699B54020FFD6E1006D9D35 /* PrivacyKitUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivacyKitUI.swift; path = PrivacyKit/Classes/PrivacyKitUI.swift; sourceTree = "<group>"; };
-		1699B54320FFE1A2006D9D35 /* PrivacyKitDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitDescription.swift; sourceTree = "<group>"; };
+		1699B54320FFE1A2006D9D35 /* PrivacyKitDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivacyKitDescription.swift; path = PrivacyKit/Classes/PrivacyKitDescription.swift; sourceTree = "<group>"; };
 		1876B773A94FBF5381BBDC5F5AA006A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18AF1D5EA3078A777701EC421BECC328 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		1AD41EB748BF83453B0E36E7ACB021BF /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
@@ -1311,7 +1311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1699B54420FFE1A2006D9D35 /* PrivacyKitDescription.swift in Sources */,
 				506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */,
 				BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */,
 				DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */,
@@ -1346,6 +1345,7 @@
 				2AC745F4144996F9310249BA8BC5C22C /* PrivacyModel.swift in Sources */,
 				9548C46DAEF905D9893F2455C0336127 /* PrivacyNoticeExt.swift in Sources */,
 				D01DFB2D3A7F7A2C024D3EB5E86F99D7 /* PrivacyNoticeVC.swift in Sources */,
+				1631202520FFECAD00F5B977 /* PrivacyKitDescription.swift in Sources */,
 				324EB610418EB2992DAC3FCF9C9079CA /* PrivacyNoticeVCEnum.swift in Sources */,
 				3D835EC49BEED7378E7D0C1F16A7F437 /* PrivacyNoticeVCProto.swift in Sources */,
 				0A3830B23288EEF7ADCF355F9B8B7E4E /* TopNoticeVC.swift in Sources */,

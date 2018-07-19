@@ -83,7 +83,6 @@ class PrivacyNoticeVC: UIViewController {
     @objc func denyPrivacy() {
         // ADD Deny Handling
         
-        
         self.dismiss(animated: true, completion: nil)
     }
 
