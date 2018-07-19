@@ -15,8 +15,9 @@
     "git": "https://github.com/ithazfire/PrivacyKit.git",
     "tag": "0.1.0"
   },
+  "swift_version": "4.0",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "PrivacyKit/Classes/**/*.{h,m,swift,xcdatamodeld}",
   "resources": "PrivacyKit/Classes/Models/*.xcdatamodeld"

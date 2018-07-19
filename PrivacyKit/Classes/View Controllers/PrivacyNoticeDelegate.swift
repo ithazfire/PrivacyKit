@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol PrivacyNotice {
-    
+public protocol PrivacyNoticeDelegate {
+    func agreedToPrivacy(userPressed agreement: Bool)
 }

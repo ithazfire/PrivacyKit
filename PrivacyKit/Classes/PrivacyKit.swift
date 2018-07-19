@@ -37,7 +37,7 @@ public class PrivacyKit {
     var includeDeny: Bool = true
     
     
-    init() {
+    private init() {
         /** Split the Default Privacy Message */
         privacyModel.buildDefaults()
         
@@ -104,7 +104,8 @@ public class PrivacyKit {
     }
     
     public func allowDismiss() {
-        
+        print("test")
+        print("HELLO WORLD")
     }
     
     public func getDescription() -> NSMutableAttributedString {
@@ -130,5 +131,44 @@ public class PrivacyKit {
         }
         
         return description
+    }
+    
+    public func testFunction() -> String {
+        return "HELLO"
+    }
+    
+    public func requirePrivacy(_ viewType: PrivacyNoticeType = .bottom, completion: (() -> Void)? = nil) {
+        print("PrivacyKit: requiring privacy")
+        
+        if PrivacyKit.shared.privacyModel.privacyAccepted == false {
+            print("PrivacyKit: presenting privacy dialog")
+            self.presentPrivacyNotice(viewType, completion: completion)
+        }
+    }
+    
+    private func presentPrivacyNotice(_ viewType: PrivacyNoticeType = .bottom, completion: (() -> Void)? = nil) {
+        var viewController: PrivacyNoticeVC?
+        
+        switch viewType {
+        case .alert:
+            viewController = AlertNoticeVC()
+        case .top:
+            viewController = TopNoticeVC()
+        case .center:
+            viewController = CenterNoticeVC()
+        case .bottom:
+            viewController = BottomNoticeVC()
+        }
+        
+        viewController!.modalTransitionStyle = .crossDissolve
+        viewController!.modalPresentationStyle = .overCurrentContext
+        
+        let win = UIWindow(frame: UIScreen.main.bounds)
+        let vc = UIViewController()
+        vc.view.backgroundColor = UIColor(white: 0, alpha: 0.4)
+        win.rootViewController = vc
+        win.windowLevel = UIWindowLevelAlert + 1
+        win.makeKeyAndVisible()
+        vc.present(viewController!, animated: true, completion: nil)
     }
 }

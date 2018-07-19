@@ -23,12 +23,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addSubview(titleLabel)
+        let b = PrivacyKit.shared.testFunction()
+        print(b)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.requirePrivacy()
+ 
     }
 
     override func viewDidLayoutSubviews() {

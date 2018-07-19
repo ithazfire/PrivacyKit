@@ -16,6 +16,8 @@ class PrivacyNoticeVC: UIViewController {
     /** UI Statics */
     let padding: CGFloat = 15
     
+    var delegate: PrivacyNoticeDelegate?
+    
     /** General Views */
     let backgroundView: UIView = {
         let view = UIView()
@@ -75,15 +77,14 @@ class PrivacyNoticeVC: UIViewController {
 
     /** Action Functions */
     @objc func agreePrivacy() {
-        // ADD Agree Handling
-        
+        // ADD Agree Handling for Privacy Model
+        self.delegate?.agreedToPrivacy(userPressed: true)
         self.dismiss(animated: true, completion: nil)
     }
 
     @objc func denyPrivacy() {
-        // ADD Deny Handling
-        
-        
+        // ADD Deny Handling for Privacy Model
+        self.delegate?.agreedToPrivacy(userPressed: false)
         self.dismiss(animated: true, completion: nil)
     }
 
