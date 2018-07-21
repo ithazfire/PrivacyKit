@@ -544,7 +544,8 @@
 				1664C16A2102B67C00927729 /* PrivacyKitStyle.swift */,
 				1664C1672102A49500927729 /* PrivacyKitErrors.swift */,
 			);
-			path = Support;
+			name = Support;
+			path = PrivacyKit/Classes/Support;
 			sourceTree = "<group>";
 		};
 		1664C15D21029C4A00927729 /* UI */ = {
@@ -553,7 +554,8 @@
 				1699B54020FFD6E1006D9D35 /* PrivacyKitColors.swift */,
 				1664C15E21029CAB00927729 /* PrivacyKitAttr.swift */,
 			);
-			path = UI;
+			name = UI;
+			path = PrivacyKit/Classes/UI;
 			sourceTree = "<group>";
 		};
 		1C3DD2E45FC3B4F1E6E91F9154E5EE7A /* Pods-PrivacyKit_Tests */ = {

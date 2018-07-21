@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PrivacyKit'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'PrivacyKit provides a data persistent method to present a privacy notice and manage whether privacy was accepted or denied.'
 
 # This description is used to generate tags and improve search results.
