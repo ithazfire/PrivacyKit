@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PrivacyKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of PrivacyKit.'
+  s.version          = '0.1.1'
+  s.summary          = 'PrivacyKit provides a data persistent method to present a privacy notice and manage whether privacy was accepted or denied.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

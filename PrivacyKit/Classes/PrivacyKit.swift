@@ -44,7 +44,5 @@ public class PrivacyKit: PrivacyKitConfigure, PrivacyKitState, PrivacyKitStyle {
     init() {
         /** Fetch or Build Default Privacy Data State */
         privacyModel.persist()
-        
-
     }
 }
