@@ -20,6 +20,40 @@ it, simply add the following line to your Podfile:
 pod 'PrivacyKit'
 ```
 
+## Basic Usage
+
+To configure PrivacyKit globally, do so from the
+`AppDelegate.application(didFinishLaunchingWithOptions)` function.
+
+```swift
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        /** Configure PrivacyKit Globally */
+        PrivacyKit.shared.config("https://github.com/ithazfire/PrivacyKit")
+
+        // Override point for customization after application launch.
+        return true
+    }
+}
+```
+
+To present the PrivacyKit UIViewController add the delegate to your `UIViewController`
+and call the `requirePrivacy()` function.
+
+```swift
+class ViewController: UIViewController, PrivacyKitDelegate {
+    override func viewDidAppear(_ animated: Bool) {
+        /** Present the PrivacyKit View if Privacy is not accepted. */
+        self.requirePrivacy()
+    }
+}
+```
+
 ## Author
 
 [Archdoog](https://github.com/Archdoog)

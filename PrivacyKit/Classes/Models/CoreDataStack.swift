@@ -2,7 +2,7 @@
 //  CoreDataStack.swift
 //  PrivacyKit
 //
-//  Created by Jacob Fielding on 7/20/18.
+//  Referenced From: https://stackoverflow.com/questions/42462364/swift-3-ios-9-and-ios-10-core-data
 //
 
 import UIKit
@@ -16,8 +16,7 @@ class CoreDataStack {
     }()
     
     static var managedObjectModel: NSManagedObjectModel = {
-        // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = Bundle(for: CoreDataStack.self).url(forResource: "PrivacyDataModel", withExtension: "momd")! // type your database name here..
+        let modelURL = Bundle(for: CoreDataStack.self).url(forResource: "PrivacyDataModel", withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelURL)!
     }()
     

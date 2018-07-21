@@ -1,13 +1,17 @@
 //
-//  PrivacyNoticeExt.swift
-//  FBSnapshotTestCase
+//  PrivacyKitDelegate.swift
+//  PrivacyKit
 //
-//  Created by Jacob Fielding on 7/18/18.
+//  Created by Jacob Fielding on 7/20/18.
 //
 
 import Foundation
 
-extension UIViewController {
+public protocol PrivacyKitDelegate {
+    func requirePrivacy(_ viewType: PrivacyNoticeType, completion: (() -> Void)?)
+}
+
+extension PrivacyKitDelegate where Self: UIViewController {
     
     public func requirePrivacy(_ viewType: PrivacyNoticeType = .bottom, completion: (() -> Void)? = nil) {
         print("PrivacyKit: requiring privacy")

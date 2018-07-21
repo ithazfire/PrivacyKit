@@ -62,6 +62,7 @@ class PrivacyNoticeVC: UIViewController {
         super.viewDidLoad()
         
         descriptionTextView.attributedText = PrivacyKit.shared.getDescription()
+        descriptionTextView.linkTextAttributes = PrivacyKit.shared.getLinkTextAttributes()
         
         view.addSubview(backgroundView)
         view.addSubview(titleLabel)
@@ -75,14 +76,12 @@ class PrivacyNoticeVC: UIViewController {
 
     /** Action Functions */
     @objc func agreePrivacy() {
-        // ADD Agree Handling
-        
+        PrivacyKit.shared.acceptPrivacy()
         self.dismiss(animated: true, completion: nil)
     }
 
     @objc func denyPrivacy() {
-        // ADD Deny Handling
-        
+        PrivacyKit.shared.denyPrivacy()
         self.dismiss(animated: true, completion: nil)
     }
 

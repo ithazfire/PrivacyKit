@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /** Configure PrivacyKit Globally */
         PrivacyKit.shared.config("https://github.com/ithazfire/PrivacyKit")
+        //PrivacyKit.shared.config("https://github.com/ithazfire/PrivacyKit", "https://github.com/ithazfire/PrivacyKit/wiki")
         
-        // Override point for customization after application launch.
         return true
     }
 
