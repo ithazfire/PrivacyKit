@@ -1,6 +1,6 @@
 # PrivacyKit
 
-[![CI Status](https://img.shields.io/travis/Archdoog/PrivacyKit.svg?style=flat)](https://travis-ci.org/ithazfire/PrivacyKit/settings)
+[![CI Status](https://travis-ci.org/ithazfire/PrivacyKit.svg?branch=master)](https://travis-ci.org/ithazfire/PrivacyKit/settings)
 [![Version](https://img.shields.io/cocoapods/v/PrivacyKit.svg?style=flat)](https://cocoapods.org/pods/PrivacyKit)
 [![License](https://img.shields.io/cocoapods/l/PrivacyKit.svg?style=flat)](https://cocoapods.org/pods/PrivacyKit)
 [![Platform](https://img.shields.io/cocoapods/p/PrivacyKit.svg?style=flat)](https://cocoapods.org/pods/PrivacyKit)
