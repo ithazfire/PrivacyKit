@@ -11,7 +11,9 @@ import PrivacyKit
 
 class ViewController: UIViewController, PrivacyKitDelegate {
 
-    let verticalOffset: CGFloat = 128
+    let verticalOffset: CGFloat = 120
+    let padding: CGFloat = 15
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 36)
@@ -36,17 +38,25 @@ class ViewController: UIViewController, PrivacyKitDelegate {
         return label
     }()
     
+    let resetButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Reset Privacy", for: .normal)
+        button.setTitleColor(.blue, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.sizeToFit()
+        button.addTarget(self, action: #selector(ViewController.reset), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        privacyAcceptedLabel.text = "Privacy Accepted: \(PrivacyKit.shared.privacyAccepted())"
-        privacyAcceptedLabel.sizeToFit()
-        privacyDeniedLabel.text = "Privacy Denied: \(PrivacyKit.shared.privacyDenied())"
-        privacyDeniedLabel.sizeToFit()
+        self.updateLabels()
         
         view.addSubview(titleLabel)
         view.addSubview(privacyAcceptedLabel)
         view.addSubview(privacyDeniedLabel)
+        view.addSubview(resetButton)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,14 +70,33 @@ class ViewController: UIViewController, PrivacyKitDelegate {
                                   height: titleLabel.frame.height)
         
         privacyAcceptedLabel.frame = CGRect(x: (view.frame.width - privacyAcceptedLabel.frame.width) / 2,
-                                            y: (view.frame.height - privacyAcceptedLabel.frame.height * 5),
+                                            y: view.frame.height - privacyAcceptedLabel.frame.height - privacyDeniedLabel.frame.height - resetButton.frame.height - padding * 2,
                                             width: privacyAcceptedLabel.frame.width,
                                             height: privacyAcceptedLabel.frame.height)
         
         privacyDeniedLabel.frame = CGRect(x: (view.frame.width - privacyDeniedLabel.frame.width) / 2,
-                                          y: (view.frame.height - privacyDeniedLabel.frame.height * 4),
+                                          y: view.frame.height - privacyDeniedLabel.frame.height - resetButton.frame.height - padding * 2,
                                           width: privacyDeniedLabel.frame.width,
                                           height: privacyDeniedLabel.frame.height)
+        
+        resetButton.frame = CGRect(x: (view.frame.width - resetButton.frame.width) / 2,
+                                   y: view.frame.height - resetButton.frame.height - padding * 2,
+                                   width: resetButton.frame.width,
+                                   height: resetButton.frame.height)
+    }
+    
+    func updateLabels() {
+        privacyAcceptedLabel.text = "Privacy Accepted: \(PrivacyKit.shared.privacyAccepted())"
+        privacyAcceptedLabel.sizeToFit()
+        privacyDeniedLabel.text = "Privacy Denied: \(PrivacyKit.shared.privacyDenied())"
+        privacyDeniedLabel.sizeToFit()
+    }
+    
+    @objc func reset() {
+        PrivacyKit.shared.setPrivacy(accepted: false)
+        PrivacyKit.shared.setPrivacy(denied: false)
+        
+        self.updateLabels()
     }
 }
 

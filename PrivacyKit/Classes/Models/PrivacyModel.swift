@@ -11,7 +11,7 @@ import CoreData
 class PrivacyModel {
     
     /** Core Data Stack */
-    fileprivate let context = CoreDataStack.managedObjectContext
+    fileprivate let context = CoreDataStack.shared.managedObjectContext
     fileprivate var privacy: Privacy?
     
     /** Data Keys */
@@ -21,7 +21,7 @@ class PrivacyModel {
     var termsOfServiceRead: Bool = false
     
     init() {
-        
+        self.persist()
     }
     
     func persist() {
@@ -30,17 +30,18 @@ class PrivacyModel {
             return
         }
         
-        if self.fetch() != nil {
+        if let result = self.fetch() {
             /** Already Built */
+            self.privacy = result
             return
         }
         
-        privacy = NSManagedObject(entity: entity, insertInto: context) as? Privacy
+        self.privacy = (NSManagedObject(entity: entity, insertInto: context) as! Privacy)
         
-        privacy?.setValue(privacyAccepted, forKey: "privacyAccepted")
-        privacy?.setValue(privacyDenied, forKey: "privacyDenied")
-        privacy?.setValue(privacyPolicyRead, forKey: "privacyPolicyRead")
-        privacy?.setValue(termsOfServiceRead, forKey: "termsOfServiceRead")
+        privacy!.setValue(privacyAccepted, forKey: "privacyAccepted")
+        privacy!.setValue(privacyDenied, forKey: "privacyDenied")
+        privacy!.setValue(privacyPolicyRead, forKey: "privacyPolicyRead")
+        privacy!.setValue(termsOfServiceRead, forKey: "termsOfServiceRead")
         
         do {
             try context.save()
@@ -77,6 +78,8 @@ class PrivacyModel {
         privacy?.setValue(privacyDenied, forKey: "privacyDenied")
         privacy?.setValue(privacyPolicyRead, forKey: "privacyPolicyRead")
         privacy?.setValue(termsOfServiceRead, forKey: "termsOfServiceRead")
+        
+        print("PrivacyModel: Ready to save privacy \(privacy)")
         
         do {
             try context.save()
