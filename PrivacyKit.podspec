@@ -18,7 +18,9 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+PrivacyKit provides a persistent CoreData method for privacy status and an associated method to present a privacy notice. When enabled
+on a UIViewController, the requirePrivacy method checks the current CoreData state and presents the privacy view controller if privacy
+has not been accepted.
                        DESC
 
   s.homepage         = 'https://github.com/ithazfire/PrivacyKit'
