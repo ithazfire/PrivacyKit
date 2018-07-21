@@ -11,8 +11,8 @@ import CoreData
 class PrivacyModel {
     
     /** Core Data Stack */
-    fileprivate let context = CoreDataStack.shared.managedObjectContext
-    fileprivate var privacy: Privacy?
+    private let context = CoreDataStack.shared.managedObjectContext
+    private var privacy: Privacy?
     
     /** Data Keys */
     var privacyAccepted: Bool = false
@@ -78,8 +78,6 @@ class PrivacyModel {
         privacy?.setValue(privacyDenied, forKey: "privacyDenied")
         privacy?.setValue(privacyPolicyRead, forKey: "privacyPolicyRead")
         privacy?.setValue(termsOfServiceRead, forKey: "termsOfServiceRead")
-        
-        print("PrivacyModel: Ready to save privacy \(privacy)")
         
         do {
             try context.save()

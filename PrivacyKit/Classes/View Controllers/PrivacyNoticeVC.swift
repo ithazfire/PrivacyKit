@@ -12,6 +12,9 @@ class PrivacyNoticeVC: UIViewController {
     /** Core Data Interface Model */
     let manager = PrivacyKit.shared
     let privacyModel = PrivacyModel()
+    
+    /** Completion Method */
+    var privacyCompletion: (() -> Void)?
 
     /** UI Statics */
     let padding: CGFloat = 15
@@ -77,13 +80,11 @@ class PrivacyNoticeVC: UIViewController {
     /** Action Functions */
     @objc func agreePrivacy() {
         PrivacyKit.shared.acceptPrivacy()
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: self.privacyCompletion)
     }
 
     @objc func denyPrivacy() {
         PrivacyKit.shared.denyPrivacy()
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: self.privacyCompletion)
     }
-
-
 }

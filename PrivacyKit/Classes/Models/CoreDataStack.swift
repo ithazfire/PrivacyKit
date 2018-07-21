@@ -5,6 +5,7 @@
 //  Referenced From: https://stackoverflow.com/questions/42462364/swift-3-ios-9-and-ios-10-core-data
 //
 
+import Foundation
 import UIKit
 import CoreData
 
@@ -25,7 +26,7 @@ class CoreDataStack {
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
-        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let url = applicationDocumentsDirectory.appendingPathComponent("DatabaseTest.sqlite") // type your database name here...
         var failureReason = "There was an error creating or loading the application's saved data."
         let options = [NSMigratePersistentStoresAutomaticallyOption: NSNumber(value: true as Bool), NSInferMappingModelAutomaticallyOption: NSNumber(value: true as Bool)]
@@ -49,15 +50,14 @@ class CoreDataStack {
     }()
     
     lazy var managedObjectContext: NSManagedObjectContext = {
-        let coordinator = persistentStoreCoordinator
+        let coordinator = self.persistentStoreCoordinator
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
     }()
     
     // MARK: - Core Data Saving support
-    
-    public func saveContext () {
+    func saveContext () {
         if managedObjectContext.hasChanges {
             do {
                 try managedObjectContext.save()

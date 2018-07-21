@@ -60,7 +60,10 @@ class ViewController: UIViewController, PrivacyKitDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.requirePrivacy(.top)
+        self.requirePrivacy(.bottom) {
+            print("PrivacyKit: Completion")
+            self.updateLabels()
+        }
     }
 
     override func viewDidLayoutSubviews() {

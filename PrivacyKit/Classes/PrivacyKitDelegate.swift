@@ -35,6 +35,7 @@ extension PrivacyKitDelegate where Self: UIViewController {
         
         viewController!.modalTransitionStyle = .crossDissolve
         viewController!.modalPresentationStyle = .overCurrentContext
-        self.present(viewController!, animated: true, completion: completion)
+        viewController!.privacyCompletion = completion
+        self.present(viewController!, animated: true, completion: nil)
     }
 }
