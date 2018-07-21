@@ -5,7 +5,6 @@
 //  Referenced From: https://stackoverflow.com/questions/42462364/swift-3-ios-9-and-ios-10-core-data
 //
 
-import Foundation
 import UIKit
 import CoreData
 
@@ -14,7 +13,7 @@ class CoreDataStack {
     static let shared = CoreDataStack()
     
     lazy var applicationDocumentsDirectory: URL = {
-        let urls = FileManager.`default`.urls(for: .documentDirectory, in: .userDomainMask)
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return urls[urls.count-1]
     }()
     
