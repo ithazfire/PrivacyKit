@@ -11,11 +11,11 @@ public protocol PrivacyKitStyle {
     func getLinkTextAttributes() -> [String: Any]
 }
 
-extension PrivacyKitStyle where Self: PrivacyKit {
+public extension PrivacyKitStyle where Self: PrivacyKit {
     public func getLinkTextAttributes() -> [String: Any] {
         return [
-            NSAttributedStringKey.font.rawValue: self.highlightAttr[NSAttributedStringKey.font],
-            NSAttributedStringKey.foregroundColor.rawValue: self.highlightAttr[NSAttributedStringKey.foregroundColor]
+            NSAttributedStringKey.font.rawValue: self.highlightAttr[NSAttributedStringKey.font]!,
+            NSAttributedStringKey.foregroundColor.rawValue: self.highlightAttr[NSAttributedStringKey.foregroundColor]!
         ]
     }
 }

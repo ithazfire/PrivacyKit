@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PrivacyKitUI {
+public class PrivacyKitUI {
     struct colors {
         static let background: UIColor = UIColor(red: 37/255, green: 39/255, blue: 46/255, alpha: 1)
         static let basic: UIColor = UIColor(red: 242/255, green: 239/255, blue: 234/255, alpha: 1)

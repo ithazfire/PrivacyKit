@@ -18,7 +18,7 @@ public protocol PrivacyKitState {
     func termsClicked() -> Bool
 }
 
-extension PrivacyKitState where Self: PrivacyKit {
+public extension PrivacyKitState where Self: PrivacyKit {
     public func acceptPrivacy() {
         privacyModel.privacyAccepted = true
         privacyModel.save()

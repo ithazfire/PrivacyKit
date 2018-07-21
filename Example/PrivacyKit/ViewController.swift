@@ -50,7 +50,7 @@ class ViewController: UIViewController, PrivacyKitDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.requirePrivacy()
+        self.requirePrivacy(.top)
     }
 
     override func viewDidLayoutSubviews() {

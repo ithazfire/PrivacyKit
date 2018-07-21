@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension PrivacyKit {
+public extension PrivacyKit {
     
     public func getDescription() -> NSMutableAttributedString? {
         return self.descriptionAttributed
@@ -76,11 +76,15 @@ extension PrivacyKit {
     
     private func bindLinks() {
         if let privacyTextRange = self.descriptionAttributed?.mutableString.range(of: self.privacyPolicyText) {
-            self.descriptionAttributed?.addAttribute(.link, value: self.privacyPolicyLink, range: privacyTextRange)
+            if let privacyLink = self.privacyPolicyLink {
+                self.descriptionAttributed?.addAttribute(.link, value: privacyLink, range: privacyTextRange)
+            }
         }
         
         if let termsOfServiceLink = self.descriptionAttributed?.mutableString.range(of: self.termsOfServiceText) {
-            self.descriptionAttributed?.addAttribute(.link, value: self.termsOfServiceLink, range: termsOfServiceLink)
+            if let termsLink = self.termsOfServiceLink {
+                self.descriptionAttributed?.addAttribute(.link, value: termsLink, range: termsOfServiceLink)
+            }
         }
     }
 }

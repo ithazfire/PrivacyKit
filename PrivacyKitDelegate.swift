@@ -14,10 +14,7 @@ public protocol PrivacyKitDelegate {
 extension PrivacyKitDelegate where Self: UIViewController {
     
     public func requirePrivacy(_ viewType: PrivacyNoticeType = .bottom, completion: (() -> Void)? = nil) {
-        print("PrivacyKit: requiring privacy")
-        
         if PrivacyKit.shared.privacyModel.privacyAccepted == false {
-            print("PrivacyKit: presenting privacy dialog")
             self.presentPrivacyNotice(viewType, completion: completion)
         }
     }

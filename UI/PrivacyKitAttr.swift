@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension PrivacyKitUI {
+public extension PrivacyKitUI {
     struct stringAttributes {
         static let paragraph: [NSAttributedStringKey: Any] = [
             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13),

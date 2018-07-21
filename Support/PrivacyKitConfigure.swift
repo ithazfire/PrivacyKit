@@ -18,7 +18,7 @@ public protocol PrivacyKitConfigure {
     func disableDeny()
 }
 
-extension PrivacyKitConfigure where Self: PrivacyKit {
+public extension PrivacyKitConfigure where Self: PrivacyKit {
     public func config(_ privacyPolicyLink: String) {
         self.privacyPolicyLink = privacyPolicyLink
         

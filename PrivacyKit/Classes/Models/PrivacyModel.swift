@@ -35,7 +35,7 @@ class PrivacyModel {
             return
         }
         
-        privacy = NSManagedObject(entity: entity, insertInto: context) as! Privacy
+        privacy = NSManagedObject(entity: entity, insertInto: context) as? Privacy
         
         privacy?.setValue(privacyAccepted, forKey: "privacyAccepted")
         privacy?.setValue(privacyDenied, forKey: "privacyDenied")
