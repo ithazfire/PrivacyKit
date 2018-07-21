@@ -268,7 +268,7 @@
 		15E0FC3DDBE6EC3494B44EF353CDE8ED /* PrivacyNoticeVCEnum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrivacyNoticeVCEnum.swift; sourceTree = "<group>"; };
 		162F9491190264048BD2A6E7CD8D9A07 /* CwlCatchException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlCatchException.h; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h; sourceTree = "<group>"; };
 		1664C15621022DEC00927729 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		1664C159210237DF00927729 /* PrivacyKitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitDelegate.swift; sourceTree = "<group>"; };
+		1664C159210237DF00927729 /* PrivacyKitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivacyKitDelegate.swift; path = PrivacyKit/Classes/PrivacyKitDelegate.swift; sourceTree = "<group>"; };
 		1664C15E21029CAB00927729 /* PrivacyKitAttr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitAttr.swift; sourceTree = "<group>"; };
 		1664C16021029EEB00927729 /* PrivacyKitState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitState.swift; sourceTree = "<group>"; };
 		1664C16221029F0900927729 /* PrivacyKitConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitConfigure.swift; sourceTree = "<group>"; };
