@@ -3,6 +3,7 @@
 //  PrivacyKit
 //
 //  Created by Jacob Fielding on 7/18/18.
+//  Updated by Jacob Fielding on 10/31/18.
 //
 
 import Foundation
@@ -76,14 +77,16 @@ public extension PrivacyKit {
     
     private func bindLinks() {
         if let privacyTextRange = self.descriptionAttributed?.mutableString.range(of: self.privacyPolicyText) {
+            self.privacyPolicyLinkRange = privacyTextRange
             if let privacyLink = self.privacyPolicyLink {
                 self.descriptionAttributed?.addAttribute(.link, value: privacyLink, range: privacyTextRange)
             }
         }
         
-        if let termsOfServiceLink = self.descriptionAttributed?.mutableString.range(of: self.termsOfServiceText) {
+        if let termsOfServiceRange = self.descriptionAttributed?.mutableString.range(of: self.termsOfServiceText) {
+            self.termsOfServiceLinkRange = termsOfServiceRange
             if let termsLink = self.termsOfServiceLink {
-                self.descriptionAttributed?.addAttribute(.link, value: termsLink, range: termsOfServiceLink)
+                self.descriptionAttributed?.addAttribute(.link, value: termsLink, range: termsOfServiceRange)
             }
         }
     }

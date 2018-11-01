@@ -14,11 +14,19 @@ public protocol PrivacyKitState {
     func setPrivacy(accepted: Bool)
     func setPrivacy(denied: Bool)
     
+    func tapPrivacyPolicy()
+    func tapTermsOfService()
+    
+    func setPrivacyRead(read: Bool)
+    func setTermsRead(read: Bool)
+    
     func privacyAccepted() -> Bool
     func privacyDenied() -> Bool
     
-    func privacyClicked() -> Bool
-    func termsClicked() -> Bool
+    func privacyTapped() -> Bool
+    func termsTapped() -> Bool
+    
+    func getState() -> [String: Any]
 }
 
 public extension PrivacyKitState where Self: PrivacyKit {
@@ -42,6 +50,26 @@ public extension PrivacyKitState where Self: PrivacyKit {
         privacyModel.save()
     }
     
+    public func tapPrivacyPolicy() {
+        privacyModel.privacyPolicyRead = true
+        privacyModel.save()
+    }
+    
+    public func tapTermsOfService() {
+        privacyModel.termsOfServiceRead = true
+        privacyModel.save()
+    }
+    
+    public func setPrivacyRead(read: Bool) {
+        privacyModel.privacyPolicyRead = read
+        privacyModel.save()
+    }
+    
+    public func setTermsRead(read: Bool) {
+        privacyModel.termsOfServiceRead = read
+        privacyModel.save()
+    }
+    
     public func privacyAccepted() -> Bool {
         return privacyModel.privacyAccepted
     }
@@ -50,11 +78,21 @@ public extension PrivacyKitState where Self: PrivacyKit {
         return privacyModel.privacyDenied
     }
     
-    public func privacyClicked() -> Bool {
+    public func privacyTapped() -> Bool {
         return privacyModel.privacyPolicyRead
     }
     
-    public func termsClicked() -> Bool {
+    public func termsTapped() -> Bool {
         return privacyModel.termsOfServiceRead
+    }
+    
+    public func getState() -> [String: Any] {
+        return [
+            "deviceUUID": UIDevice.current.identifierForVendor?.uuidString ?? "",
+            "privacyAccepted": self.privacyAccepted(),
+            "privacyDenied": self.privacyDenied(),
+            "privacyPolicyTapped": self.privacyTapped(),
+            "termsOfServiceTapped": self.termsTapped()
+        ]
     }
 }

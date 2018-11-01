@@ -1,13 +1,13 @@
 //
 //  PrivacyNoticeVC.swift
-//  FBSnapshotTestCase
+//  PrivacyKit
 //
 //  Created by Jacob Fielding on 7/18/18.
 //
 
 import UIKit
 
-class PrivacyNoticeVC: UIViewController {
+class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
 
     /** Core Data Interface Model */
     let manager = PrivacyKit.shared
@@ -64,6 +64,7 @@ class PrivacyNoticeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        descriptionTextView.delegate = self
         descriptionTextView.attributedText = PrivacyKit.shared.getDescription()
         descriptionTextView.linkTextAttributes = PrivacyKit.shared.getLinkTextAttributes()
         
@@ -86,5 +87,21 @@ class PrivacyNoticeVC: UIViewController {
     @objc func denyPrivacy() {
         PrivacyKit.shared.denyPrivacy()
         self.dismiss(animated: true, completion: self.privacyCompletion)
+    }
+    
+    /** Replace the UITextView Delegate to Capture Actions */
+    @available(iOS 10.0, *)
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        /** Registers the Link Tap For Privacy Policy */
+        if URL.absoluteString == self.manager.privacyPolicyLink {
+            self.manager.tapPrivacyPolicy()
+        }
+        
+        /** Registers the Link Tap For Terms of Service Link */
+        if URL.absoluteString == self.manager.termsOfServiceLink {
+            self.manager.tapTermsOfService()
+        }
+
+        return true
     }
 }

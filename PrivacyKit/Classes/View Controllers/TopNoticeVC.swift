@@ -1,6 +1,6 @@
 //
 //  TopNoticeVC.swift
-//  FBSnapshotTestCase
+//  PrivacyKit
 //
 //  Created by Jacob Fielding on 7/18/18.
 //
