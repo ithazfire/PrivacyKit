@@ -7,14 +7,13 @@
 
 import UIKit
 
-class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
+public class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
 
     /** Core Data Interface Model */
-    let manager = PrivacyKit.shared
     let privacyModel = PrivacyModel()
     
     /** Completion Method */
-    var privacyCompletion: (() -> Void)?
+    var privacyCompletion: PrivacyCompletion?
 
     /** UI Statics */
     let padding: CGFloat = 15
@@ -42,11 +41,11 @@ class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
     }()
 
     /** Action Buttons */
-    let agreeButton: UIButton = {
+    let acceptButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(PrivacyKitUI.colors.basic, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.addTarget(self, action: #selector(PrivacyNoticeVC.agreePrivacy), for: .touchUpInside)
+        button.addTarget(self, action: #selector(PrivacyNoticeVC.acceptPrivacy), for: .touchUpInside)
         button.setTitle("Agree", for: .normal)
         button.sizeToFit()
         return button
@@ -61,7 +60,7 @@ class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
         return button
     }()
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         descriptionTextView.delegate = self
@@ -71,15 +70,15 @@ class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
         view.addSubview(backgroundView)
         view.addSubview(titleLabel)
         view.addSubview(descriptionTextView)
-        view.addSubview(agreeButton)
+        view.addSubview(acceptButton)
         
-        if manager.includeDeny {
+        if PrivacyKit.shared.includeDeny {
             view.addSubview(denyButton)
         }
     }
 
     /** Action Functions */
-    @objc func agreePrivacy() {
+    @objc func acceptPrivacy() {
         PrivacyKit.shared.acceptPrivacy()
         self.dismiss(animated: true, completion: self.privacyCompletion)
     }
@@ -91,15 +90,15 @@ class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
     
     /** Replace the UITextView Delegate to Capture Actions */
     @available(iOS 10.0, *)
-    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+    public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         /** Registers the Link Tap For Privacy Policy */
-        if URL.absoluteString == self.manager.privacyPolicyLink {
-            self.manager.tapPrivacyPolicy()
+        if URL.absoluteString == PrivacyKit.shared.privacyPolicyLink {
+            PrivacyKit.shared.tapPrivacyPolicy()
         }
         
         /** Registers the Link Tap For Terms of Service Link */
-        if URL.absoluteString == self.manager.termsOfServiceLink {
-            self.manager.tapTermsOfService()
+        if URL.absoluteString == PrivacyKit.shared.termsOfServiceLink {
+            PrivacyKit.shared.tapTermsOfService()
         }
 
         return true

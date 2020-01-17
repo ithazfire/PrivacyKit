@@ -9,13 +9,13 @@ import Foundation
 
 public extension PrivacyKitUI {
     struct stringAttributes {
-        static let paragraph: [NSAttributedStringKey: Any] = [
-            NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13),
-            NSAttributedStringKey.foregroundColor: PrivacyKitUI.colors.basic
+        static let paragraph: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13),
+            NSAttributedString.Key.foregroundColor: PrivacyKitUI.colors.basic
         ]
-        static let highlights: [NSAttributedStringKey: Any] = [
-            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 13),
-            NSAttributedStringKey.foregroundColor: PrivacyKitUI.colors.basic
+        static let highlights: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 13),
+            NSAttributedString.Key.foregroundColor: PrivacyKitUI.colors.basic
         ]
     }
 }

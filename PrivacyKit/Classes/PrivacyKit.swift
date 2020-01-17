@@ -42,8 +42,8 @@ public class PrivacyKit: PrivacyKitConfigure, PrivacyKitState, PrivacyKitStyle {
     var termsOfServiceLinkRange: NSRange?
     
     /** Default Atributes */
-    var paragraphAttr: [NSAttributedStringKey: Any] = PrivacyKitUI.stringAttributes.paragraph
-    var highlightAttr: [NSAttributedStringKey: Any] = PrivacyKitUI.stringAttributes.highlights
+    var paragraphAttr: [NSAttributedString.Key: Any] = PrivacyKitUI.stringAttributes.paragraph
+    var highlightAttr: [NSAttributedString.Key: Any] = PrivacyKitUI.stringAttributes.highlights
     
     init() {
         /** Fetch or Build Default Privacy Data State */

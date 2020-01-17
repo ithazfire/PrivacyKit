@@ -10,6 +10,5 @@ import Foundation
 public enum PrivacyNoticeType {
     case top
     case bottom
-    case center
     case alert
 }

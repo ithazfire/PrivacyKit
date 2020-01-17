@@ -27,13 +27,13 @@ class BottomNoticeVC: PrivacyNoticeVC {
                                            width: self.view.frame.width - 2 * padding - 10,
                                            height: 92)
         
-        agreeButton.frame = CGRect(x: self.view.frame.width - agreeButton.frame.width - padding,
-                                   y: self.view.frame.height - outerHeight + 20,
-                                   width: agreeButton.frame.width,
-                                   height: 12)
+        acceptButton.frame = CGRect(x: self.view.frame.width - acceptButton.frame.width - padding,
+                                    y: self.view.frame.height - outerHeight + 20,
+                                    width: acceptButton.frame.width,
+                                    height: 12)
         
-        if manager.includeDeny {
-            denyButton.frame = CGRect(x: self.view.frame.width - agreeButton.frame.width - denyButton.frame.width - 2 * padding,
+        if PrivacyKit.shared.includeDeny {
+            denyButton.frame = CGRect(x: self.view.frame.width - acceptButton.frame.width - denyButton.frame.width - 2 * padding,
                                       y: self.view.frame.height - outerHeight + 20,
                                       width: denyButton.frame.width,
                                       height: 12)
