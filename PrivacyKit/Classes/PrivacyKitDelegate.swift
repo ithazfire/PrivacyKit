@@ -15,6 +15,13 @@ public protocol PrivacyKitDelegate {
 
 extension PrivacyKitDelegate where Self: UIViewController {
     
+    /// A View Controller extension to require privacy. This function is placed in the View Controller lifecycle (e.g. viewDidAppear)
+    /// To display the privacy notice when your intro view controller loads.
+    /// - Parameters:
+    ///   - viewType: The View Controller's type. This controls where the PrivacyNotice VIew Controller
+    ///               Appears on the screen.
+    ///   - completion: The completion to run when the privacy notice is accepted or denied. This allows custom
+    ///                 actions to occur when privacy is completed.
     public func requirePrivacy(_ viewType: PrivacyNoticeType = .bottom, completion: PrivacyCompletion? = nil) {
         if PrivacyKit.shared.privacyModel.privacyAccepted == false {
             self.presentPrivacyNotice(viewType, completion: completion)
