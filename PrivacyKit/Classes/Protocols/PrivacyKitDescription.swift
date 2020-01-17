@@ -57,6 +57,7 @@ public extension PrivacyKit {
     
     private func getAttributed() -> NSMutableAttributedString {
         let description = NSMutableAttributedString(string: String(""))
+        
         if let parts = self.descriptionParts {
             for part in parts {
                 var attributes: [NSAttributedString.Key: Any] = self.paragraphAttr

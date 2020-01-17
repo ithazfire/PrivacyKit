@@ -26,6 +26,7 @@ public protocol PrivacyKitState {
     func privacyTapped() -> Bool
     func termsTapped() -> Bool
     
+    func resetState()
     func getState() -> [String: Any]
 }
 
@@ -84,6 +85,14 @@ public extension PrivacyKitState where Self: PrivacyKit {
     
     func termsTapped() -> Bool {
         return privacyModel.termsOfServiceRead
+    }
+    
+    func resetState() {
+        privacyModel.privacyAccepted = false
+        privacyModel.privacyDenied = false
+        privacyModel.termsOfServiceRead = false
+        privacyModel.privacyPolicyRead = false
+        privacyModel.save()
     }
     
     func getState() -> [String: Any] {

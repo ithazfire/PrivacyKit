@@ -26,11 +26,18 @@ public class PrivacyKit: PrivacyKitConfigure, PrivacyKitState, PrivacyKitStyle {
     var privacyNoticeTitle: String = "Privacy Notice"
     
     /** Simple Privacy Policy Only Notice */
-    var privacyDescription: String = "This App collects personally identifyable data as outlined in the Privacy Policy. By continuing to use the app you consent to the policy."
+    var privacyDescription: String = """
+        This App collects personally identifyable data as outlined in the \
+        Privacy Policy. By continuing to use the app you consent to the policy.
+        """
     var privacyPolicyText: String = "Privacy Policy"
     
     /** Privacy and Terms of Service Notice */
-    var termsOfServiceDescription: String = "This App collects personally identifyable data as outlined in the Privacy Policy and includes a Terms of Service. By continuing to use the app you consent to the policy and terms."
+    var termsOfServiceDescription: String = """
+        This App collects personally identifyable data as outlined in the \
+        Privacy Policy and includes a Terms of Service. By continuing to \
+        use the app you consent to the policy and terms.
+        """
     var termsOfServiceText: String = "Terms of Service"
     
     /** Link Specifications */

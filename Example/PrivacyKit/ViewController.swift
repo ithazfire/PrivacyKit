@@ -96,7 +96,8 @@ class ViewController: UIViewController, PrivacyKitDelegate {
                                    height: resetButton.frame.height)
 
         termsLinkTappedLabel.frame = CGRect(x: (view.frame.width - termsLinkTappedLabel.frame.width) / 2,
-                                            y: view.frame.height - termsLinkTappedLabel.frame.height - resetButton.frame.height - padding * 2,
+                                            y: view.frame.height - termsLinkTappedLabel.frame.height -
+                                                resetButton.frame.height - padding * 2,
                                             width: termsLinkTappedLabel.frame.width,
                                             height: termsLinkTappedLabel.frame.height)
 
