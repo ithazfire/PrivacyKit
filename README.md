@@ -1,5 +1,6 @@
 # PrivacyKit
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec0c6633ce234ec09cab393f2828958f)](https://app.codacy.com/gh/ithazfire/PrivacyKit?utm_source=github.com&utm_medium=referral&utm_content=ithazfire/PrivacyKit&utm_campaign=Badge_Grade_Dashboard)
 [![CI Status](https://travis-ci.org/ithazfire/PrivacyKit.svg?branch=master)](https://travis-ci.org/ithazfire/PrivacyKit/settings)
 [![Version](https://img.shields.io/cocoapods/v/PrivacyKit.svg?style=flat)](https://cocoapods.org/pods/PrivacyKit)
 [![License](https://img.shields.io/cocoapods/l/PrivacyKit.svg?style=flat)](https://cocoapods.org/pods/PrivacyKit)
