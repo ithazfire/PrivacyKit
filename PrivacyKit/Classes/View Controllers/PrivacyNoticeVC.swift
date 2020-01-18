@@ -45,7 +45,6 @@ public class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
         let button = UIButton()
         button.setTitleColor(PrivacyKitUI.colors.basic, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.addTarget(self, action: #selector(PrivacyNoticeVC.acceptPrivacy), for: .touchUpInside)
         button.setTitle("Agree", for: .normal)
         button.sizeToFit()
         return button
@@ -54,7 +53,6 @@ public class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
         let button = UIButton()
         button.setTitleColor(PrivacyKitUI.colors.basic, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.addTarget(self, action: #selector(PrivacyNoticeVC.denyPrivacy), for: .touchUpInside)
         button.setTitle("Deny", for: .normal)
         button.sizeToFit()
         return button
@@ -63,6 +61,10 @@ public class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
     override public func viewDidLoad() {
         super.viewDidLoad()
         
+        /** Set the Privacy Notice Title **/
+        titleLabel.text = PrivacyKit.shared.privacyNoticeTitle
+        
+        /** Set the Privacy Notice Description **/
         descriptionTextView.delegate = self
         descriptionTextView.attributedText = PrivacyKit.shared.getDescription()
         descriptionTextView.linkTextAttributes = PrivacyKit.shared.getLinkTextAttributes()
@@ -75,17 +77,26 @@ public class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
         if PrivacyKit.shared.includeDeny {
             view.addSubview(denyButton)
         }
+        
+        acceptButton.addTarget(self, action: #selector(PrivacyNoticeVC.acceptPrivacy), for: .touchUpInside)
+        denyButton.addTarget(self, action: #selector(PrivacyNoticeVC.denyPrivacy), for: .touchUpInside)
     }
 
     /** Action Functions */
     @objc func acceptPrivacy() {
         PrivacyKit.shared.acceptPrivacy()
-        self.dismiss(animated: true, completion: self.privacyCompletion)
+        
+        self.dismiss(animated: true) {
+            self.privacyCompletion?(PrivacyKit.shared.privacyAccepted(), PrivacyKit.shared.privacyDenied())
+        }
     }
 
     @objc func denyPrivacy() {
         PrivacyKit.shared.denyPrivacy()
-        self.dismiss(animated: true, completion: self.privacyCompletion)
+        
+        self.dismiss(animated: true) {
+            self.privacyCompletion?(PrivacyKit.shared.privacyAccepted(), PrivacyKit.shared.privacyDenied())
+        }
     }
     
     /** Replace the UITextView Delegate to Capture Actions */

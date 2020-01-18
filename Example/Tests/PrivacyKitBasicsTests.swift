@@ -1,3 +1,11 @@
+//
+//  PrivacyKitConfigureTests.swift
+//  PrivacyKit_Example
+//
+//  Created by Jacob Fielding on 1/16/20.
+//  Copyright © 2020 CocoaPods. All rights reserved.
+//
+
 import Quick
 import Nimble
 @testable import PrivacyKit

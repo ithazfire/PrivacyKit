@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PrivacyKit'
-  s.version          = '0.1.7'
+  s.version          = '1.0.0'
   s.summary          = 'PrivacyKit provides a data persistent method to present a privacy notice and manage whether privacy was accepted or denied.'
 
 # This description is used to generate tags and improve search results.
@@ -35,7 +35,7 @@ has not been accepted.
 
   s.source_files = 'PrivacyKit/Classes/**/*.{h,m,swift,xcdatamodeld}'
   s.resources = 'PrivacyKit/Classes/Models/*.xcdatamodeld'
-  
+
   # s.resource_bundles = {
   #   'PrivacyKit' => ['PrivacyKit/Assets/*.png']
   # }

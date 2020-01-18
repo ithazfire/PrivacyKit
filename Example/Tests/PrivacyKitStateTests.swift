@@ -1,5 +1,5 @@
 //
-//  PrivacyKitStateExtras.swift
+//  PrivacyKitStateTests.swift
 //  PrivacyKit_Example
 //
 //  Created by Jacob Fielding on 1/16/20.
@@ -13,8 +13,6 @@ import Nimble
 class TestPrivacyKitStateExtras: QuickSpec {
     override func spec() {
         it("resets the data model state") {
-            PrivacyKit.shared.resetState()
-
             PrivacyKit.shared.acceptPrivacy()
             PrivacyKit.shared.denyPrivacy()
             PrivacyKit.shared.tapPrivacyPolicy()

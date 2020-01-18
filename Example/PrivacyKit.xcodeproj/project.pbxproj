@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16A6356C23D194BB00FD7195 /* PrivacyKitDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6356A23D1949400FD7195 /* PrivacyKitDescription.swift */; };
-		16A6356F23D195C100FD7195 /* PrivacyKitStateExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6356D23D195B700FD7195 /* PrivacyKitStateExtras.swift */; };
-		16A6357223D197CB00FD7195 /* PrivacyKitConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6357023D197C000FD7195 /* PrivacyKitConfigure.swift */; };
+		16489DF523D28F1300DE414D /* PrivacyKitDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16489DF323D28E5B00DE414D /* PrivacyKitDelegateTests.swift */; };
+		16A6356C23D194BB00FD7195 /* PrivacyKitDescriptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6356A23D1949400FD7195 /* PrivacyKitDescriptionTests.swift */; };
+		16A6356F23D195C100FD7195 /* PrivacyKitStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6356D23D195B700FD7195 /* PrivacyKitStateTests.swift */; };
+		16A6357223D197CB00FD7195 /* PrivacyKitConfigureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A6357023D197C000FD7195 /* PrivacyKitConfigureTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* PrivacyKitBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* PrivacyKitBasics.swift */; };
+		607FACEC1AFB9204008FA782 /* PrivacyKitBasicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* PrivacyKitBasicsTests.swift */; };
 		BF12493C7ADA9BAFD0878E67 /* Pods_PrivacyKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0994E2B681F59AB9C30C1D6 /* Pods_PrivacyKit_Tests.framework */; };
 		BFB8BAFB028AC9FECCDF74E1 /* Pods_PrivacyKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA14549401AC85F8706D8BA2 /* Pods_PrivacyKit_Example.framework */; };
 /* End PBXBuildFile section */
@@ -32,9 +33,10 @@
 
 /* Begin PBXFileReference section */
 		160A04F9218B828700C2D42D /* PrivacyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PrivacyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		16A6356A23D1949400FD7195 /* PrivacyKitDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitDescription.swift; sourceTree = "<group>"; };
-		16A6356D23D195B700FD7195 /* PrivacyKitStateExtras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitStateExtras.swift; sourceTree = "<group>"; };
-		16A6357023D197C000FD7195 /* PrivacyKitConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitConfigure.swift; sourceTree = "<group>"; };
+		16489DF323D28E5B00DE414D /* PrivacyKitDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitDelegateTests.swift; sourceTree = "<group>"; };
+		16A6356A23D1949400FD7195 /* PrivacyKitDescriptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitDescriptionTests.swift; sourceTree = "<group>"; };
+		16A6356D23D195B700FD7195 /* PrivacyKitStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitStateTests.swift; sourceTree = "<group>"; };
+		16A6357023D197C000FD7195 /* PrivacyKitConfigureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitConfigureTests.swift; sourceTree = "<group>"; };
 		43DBA13BBFBC97D64AA7C997 /* PrivacyKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PrivacyKit.podspec; path = ../PrivacyKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		558B6ACB578E661CF7FDF219 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PrivacyKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivacyKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +48,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PrivacyKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrivacyKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* PrivacyKitBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitBasics.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* PrivacyKitBasicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitBasicsTests.swift; sourceTree = "<group>"; };
 		67B870B7A1965D22D26538F1 /* Pods-PrivacyKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivacyKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-PrivacyKit_Example/Pods-PrivacyKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		75A16A1653944E962E4DC63D /* Pods-PrivacyKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivacyKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PrivacyKit_Tests/Pods-PrivacyKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		761D634DAE5D7A254DE353ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -123,10 +125,11 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* PrivacyKitBasics.swift */,
-				16A6357023D197C000FD7195 /* PrivacyKitConfigure.swift */,
-				16A6356D23D195B700FD7195 /* PrivacyKitStateExtras.swift */,
-				16A6356A23D1949400FD7195 /* PrivacyKitDescription.swift */,
+				607FACEB1AFB9204008FA782 /* PrivacyKitBasicsTests.swift */,
+				16A6357023D197C000FD7195 /* PrivacyKitConfigureTests.swift */,
+				16A6356D23D195B700FD7195 /* PrivacyKitStateTests.swift */,
+				16A6356A23D1949400FD7195 /* PrivacyKitDescriptionTests.swift */,
+				16489DF323D28E5B00DE414D /* PrivacyKitDelegateTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -315,7 +318,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint generate-docs\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		243BD6C29F8A5B9E1DC5C383 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -395,10 +398,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16A6357223D197CB00FD7195 /* PrivacyKitConfigure.swift in Sources */,
-				16A6356F23D195C100FD7195 /* PrivacyKitStateExtras.swift in Sources */,
-				16A6356C23D194BB00FD7195 /* PrivacyKitDescription.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* PrivacyKitBasics.swift in Sources */,
+				16A6357223D197CB00FD7195 /* PrivacyKitConfigureTests.swift in Sources */,
+				16A6356F23D195C100FD7195 /* PrivacyKitStateTests.swift in Sources */,
+				16A6356C23D194BB00FD7195 /* PrivacyKitDescriptionTests.swift in Sources */,
+				16489DF523D28F1300DE414D /* PrivacyKitDelegateTests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* PrivacyKitBasicsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  PrivacyKitConfigure.swift
+//  PrivacyKitConfigureTests.swift
 //  PrivacyKit_Example
 //
 //  Created by Jacob Fielding on 1/16/20.

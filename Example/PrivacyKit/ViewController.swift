@@ -58,7 +58,6 @@ class ViewController: UIViewController, PrivacyKitDelegate {
         button.setTitleColor(.blue, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.sizeToFit()
-        button.addTarget(self, action: #selector(ViewController.reset), for: .touchUpInside)
         return button
     }()
 
@@ -73,11 +72,20 @@ class ViewController: UIViewController, PrivacyKitDelegate {
         view.addSubview(privacyLinkTappedLabel)
         view.addSubview(termsLinkTappedLabel)
         view.addSubview(resetButton)
+
+        resetButton.addTarget(self, action: #selector(ViewController.reset), for: .touchUpInside)
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        self.requirePrivacy(.bottom) {
-            print("PrivacyKit: Completion")
+        self.requirePrivacy(.bottom) { (accepted, denied) in
+            if denied {
+                print("PrivacyKit: completed with denied.")
+            }
+
+            if accepted {
+                print("PrivacyKit: completed with accepted.")
+            }
+
             self.updateLabels()
         }
 
