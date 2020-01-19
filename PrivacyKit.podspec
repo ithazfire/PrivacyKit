@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PrivacyKit'
-  s.version          = '0.1.7'
+  s.version          = '1.0.0'
   s.summary          = 'PrivacyKit provides a data persistent method to present a privacy notice and manage whether privacy was accepted or denied.'
 
 # This description is used to generate tags and improve search results.
@@ -28,14 +28,14 @@ has not been accepted.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Archdoog' => 'jacob@ithazfire.com' }
   s.source           = { :git => 'https://github.com/ithazfire/PrivacyKit.git', :tag => s.version.to_s }
-  s.swift_version    = '4.0'
+  s.swift_version    = '5.1'
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'PrivacyKit/Classes/**/*.{h,m,swift,xcdatamodeld}'
   s.resources = 'PrivacyKit/Classes/Models/*.xcdatamodeld'
-  
+
   # s.resource_bundles = {
   #   'PrivacyKit' => ['PrivacyKit/Assets/*.png']
   # }

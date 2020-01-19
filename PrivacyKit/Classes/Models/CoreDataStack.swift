@@ -26,7 +26,7 @@ class CoreDataStack {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = applicationDocumentsDirectory.appendingPathComponent("DatabaseTest.sqlite") // type your database name here...
+        let url = applicationDocumentsDirectory.appendingPathComponent("PrivacyKit.sqlite") // type your database name here...
         var failureReason = "There was an error creating or loading the application's saved data."
         let options = [NSMigratePersistentStoresAutomaticallyOption: NSNumber(value: true as Bool), NSInferMappingModelAutomaticallyOption: NSNumber(value: true as Bool)]
         do {

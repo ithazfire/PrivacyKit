@@ -7,99 +7,155 @@
 
 import UIKit
 
-class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
+open class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
 
     /** Core Data Interface Model */
-    let manager = PrivacyKit.shared
-    let privacyModel = PrivacyModel()
+    internal let privacyModel = PrivacyModel()
     
     /** Completion Method */
-    var privacyCompletion: (() -> Void)?
+    var privacyCompletion: PrivacyCompletion?
 
     /** UI Statics */
-    let padding: CGFloat = 15
+    internal let padding: CGFloat = 15
     
     /** General Views */
-    let backgroundView: UIView = {
+    internal let backgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = PrivacyKitUI.colors.background
+        view.backgroundColor = PrivacyKit.shared.style.backgroundColor
+        view.layer.cornerRadius = PrivacyKit.shared.style.backgroundCornerRadius
         return view
     }()
-    let titleLabel: UILabel = {
+    internal var blurView: UIVisualEffectView?
+    
+    internal let titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = PrivacyKitUI.colors.basic
+        label.textColor = PrivacyKit.shared.style.textColor
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.text = "Privacy Notice"
         return label
     }()
     
     /** Primary Text View */
-    let descriptionTextView: UITextView = {
+    internal let descriptionTextView: UITextView = {
         let label = UITextView()
         label.backgroundColor = .clear
         label.isEditable = false
+        label.isScrollEnabled = true
         return label
     }()
 
     /** Action Buttons */
-    let agreeButton: UIButton = {
+    internal let acceptButton: UIButton = {
         let button = UIButton()
-        button.setTitleColor(PrivacyKitUI.colors.basic, for: .normal)
+        button.setTitleColor(PrivacyKit.shared.style.textColor, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.addTarget(self, action: #selector(PrivacyNoticeVC.agreePrivacy), for: .touchUpInside)
         button.setTitle("Agree", for: .normal)
         button.sizeToFit()
+        button.layer.cornerRadius = 7
         return button
     }()
-    let denyButton: UIButton = {
+    internal let denyButton: UIButton = {
         let button = UIButton()
-        button.setTitleColor(PrivacyKitUI.colors.basic, for: .normal)
+        button.setTitleColor(PrivacyKit.shared.style.textColor, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.addTarget(self, action: #selector(PrivacyNoticeVC.denyPrivacy), for: .touchUpInside)
         button.setTitle("Deny", for: .normal)
         button.sizeToFit()
+        button.layer.cornerRadius = 7
         return button
     }()
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    internal func addDefaultView() {
+        /** Set the Privacy Notice Title **/
+        titleLabel.text = PrivacyKit.shared.privacyNoticeTitle
         
+        /** Set the Privacy Notice Description **/
         descriptionTextView.delegate = self
         descriptionTextView.attributedText = PrivacyKit.shared.getDescription()
         descriptionTextView.linkTextAttributes = PrivacyKit.shared.getLinkTextAttributes()
         
-        view.addSubview(backgroundView)
-        view.addSubview(titleLabel)
-        view.addSubview(descriptionTextView)
-        view.addSubview(agreeButton)
+        /** Add Haptic & Error Animation Feedback to Blur View **/
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(PrivacyNoticeVC.outerViewTap))
+        // gesture.delegate = self
+        view.addGestureRecognizer(gesture)
         
-        if manager.includeDeny {
-            view.addSubview(denyButton)
+        /** Add a Blur View to Prevent the User for Trying to Pass Touch Events Through **/
+        if PrivacyKit.shared.includeBlur {
+            let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
+            
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.alpha = 0.75
+            blurEffectView.frame = view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+            view.addSubview(blurEffectView)
         }
+        
+        /** Add Basic Stuff **/
+        view.addSubview(backgroundView)
+        backgroundView.addSubview(titleLabel)
+        backgroundView.addSubview(descriptionTextView)
+        backgroundView.addSubview(acceptButton)
+        
+        if PrivacyKit.shared.includeDeny {
+            backgroundView.addSubview(denyButton)
+        }
+        
+        acceptButton.addTarget(self, action: #selector(PrivacyNoticeVC.acceptPrivacy), for: .touchUpInside)
+        denyButton.addTarget(self, action: #selector(PrivacyNoticeVC.denyPrivacy), for: .touchUpInside)
     }
 
     /** Action Functions */
-    @objc func agreePrivacy() {
+    @objc open func acceptPrivacy() {
         PrivacyKit.shared.acceptPrivacy()
-        self.dismiss(animated: true, completion: self.privacyCompletion)
+        
+        self.privacyCompletion?(PrivacyKit.shared.privacyAccepted(), PrivacyKit.shared.privacyDenied())
+        print("Accept completion ran.")
+        self.dismiss(animated: true)
     }
 
-    @objc func denyPrivacy() {
+    @objc open func denyPrivacy() {
         PrivacyKit.shared.denyPrivacy()
-        self.dismiss(animated: true, completion: self.privacyCompletion)
+        
+        self.privacyCompletion?(PrivacyKit.shared.privacyAccepted(), PrivacyKit.shared.privacyDenied())
+        print("Deny completion ran.")
+        self.dismiss(animated: true)
+    }
+    
+    @objc internal func outerViewTap() {
+        if #available(iOS 10.0, *) {
+            let feedback = UIImpactFeedbackGenerator(style: .light)
+            feedback.prepare()
+            feedback.impactOccurred()
+        }
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.view?.backgroundColor = PrivacyKit.shared.style.errorColor
+        }) { (result) in
+            self.view?.backgroundColor = .clear
+        }
+        
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: [.curveEaseOut], animations: {
+            self.acceptButton.backgroundColor = PrivacyKit.shared.style.buttonHighlightColor
+        }) { (_) in
+            self.acceptButton.backgroundColor = .clear
+        }
     }
     
     /** Replace the UITextView Delegate to Capture Actions */
     @available(iOS 10.0, *)
-    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+    public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         /** Registers the Link Tap For Privacy Policy */
-        if URL.absoluteString == self.manager.privacyPolicyLink {
-            self.manager.tapPrivacyPolicy()
+        if URL.absoluteString == PrivacyKit.shared.privacyPolicyLink {
+            PrivacyKit.shared.tapPrivacyPolicy()
         }
         
         /** Registers the Link Tap For Terms of Service Link */
-        if URL.absoluteString == self.manager.termsOfServiceLink {
-            self.manager.tapTermsOfService()
+        if URL.absoluteString == PrivacyKit.shared.termsOfServiceLink {
+            PrivacyKit.shared.tapTermsOfService()
         }
 
         return true

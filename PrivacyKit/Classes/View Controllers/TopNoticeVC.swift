@@ -9,34 +9,46 @@ import UIKit
 
 class TopNoticeVC: PrivacyNoticeVC {
 
-    let outerHeight: CGFloat = 156
+    let outerHeight: CGFloat = 192
+    let innerPadding: CGFloat = 5
     
-    override func viewDidLayoutSubviews() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        addDefaultView()
+    }
+    
+    override func viewDidLayoutSubviews() {        
         backgroundView.frame = CGRect(x: 0,
-                                      y: 0,
-                                      width: self.view.frame.width,
-                                      height: outerHeight)
+                                       y: 0,
+                                       width: view.frame.width,
+                                       height: outerHeight)
+        
+        var paddingTop: CGFloat = 25
+        if #available(iOS 11.0, *) {
+            paddingTop = view.safeAreaInsets.top
+        }
         
         titleLabel.frame = CGRect(x: padding,
-                                  y: 50,
-                                  width: self.view.frame.width - 2 * padding,
+                                  y: paddingTop + innerPadding,
+                                  width: view.frame.width - 2 * padding,
                                   height: 20)
         
         descriptionTextView.frame = CGRect(x: padding - 5,
-                                           y: 70,
-                                           width: self.view.frame.width - 2 * padding - 10,
-                                           height: 92)
+                                           y: titleLabel.frame.maxY + innerPadding,
+                                           width: view.frame.width - 2 * padding - 10,
+                                           height: 72)
         
-        agreeButton.frame = CGRect(x: self.view.frame.width - agreeButton.frame.width - padding,
-                                   y: outerHeight - 30,
-                                   width: agreeButton.frame.width,
-                                   height: 12)
+        acceptButton.frame = CGRect(x: view.frame.width - acceptButton.frame.width - padding,
+                                    y: descriptionTextView.frame.maxY,
+                                    width: acceptButton.frame.width + innerPadding,
+                                    height: acceptButton.frame.height)
         
-        if manager.includeDeny {
-            denyButton.frame = CGRect(x: self.view.frame.width - agreeButton.frame.width - denyButton.frame.width - 2 * padding,
-                                      y: outerHeight - 30,
-                                      width: denyButton.frame.width,
-                                      height: 12)
+        if  PrivacyKit.shared.includeDeny {
+            denyButton.frame = CGRect(x: acceptButton.frame.minX - denyButton.frame.width - padding,
+                                      y: descriptionTextView.frame.maxY,
+                                      width: denyButton.frame.width + innerPadding,
+                                      height: denyButton.frame.height)
         }
     }
 }

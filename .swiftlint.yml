@@ -1,0 +1,4 @@
+included:
+  - PrivacyKit
+  - Example/PrivacyKit
+  - Example/Tests
