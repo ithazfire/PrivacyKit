@@ -7,6 +7,3 @@
 
 import Foundation
 
-public typealias PrivacyAccepted = Bool
-public typealias PrivacyDenied = Bool
-public typealias PrivacyCompletion = ((PrivacyAccepted, PrivacyDenied) -> Void)

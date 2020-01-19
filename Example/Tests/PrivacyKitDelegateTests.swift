@@ -51,6 +51,9 @@ class TestPrivacyKitDelegate: QuickSpec {
         it("is presents the bottom PrivacyNoticeVC") {
             let delegateVC = TestDelegateVC()
 
+            PrivacyKit.shared.config("https://example.com")
+            PrivacyKit.shared.resetState()
+
             delegateVC.requirePrivacy(.bottom)
 
             expect(delegateVC.presented).toEventually(beTrue())
@@ -59,6 +62,9 @@ class TestPrivacyKitDelegate: QuickSpec {
 
         it("is presents the top PrivacyNoticeVC") {
             let delegateVC = TestDelegateVC()
+
+            PrivacyKit.shared.config("https://example.com")
+            PrivacyKit.shared.resetState()
 
             delegateVC.requirePrivacy(.top)
 
@@ -69,6 +75,9 @@ class TestPrivacyKitDelegate: QuickSpec {
         it("presents the alert VC") {
             let delegateVC = TestDelegateVC()
 
+            PrivacyKit.shared.config("https://example.com")
+            PrivacyKit.shared.resetState()
+
             delegateVC.requirePrivacy(.alert)
 
             expect(delegateVC.presented).toEventually(beTrue())
@@ -78,6 +87,9 @@ class TestPrivacyKitDelegate: QuickSpec {
         it("presents the custom VC") {
             let delegateVC = TestDelegateVC()
             let noticeVC = TestNoticeVC()
+
+            PrivacyKit.shared.config("https://example.com")
+            PrivacyKit.shared.resetState()
 
             delegateVC.requirePrivacy(privacyViewController: noticeVC)
 
