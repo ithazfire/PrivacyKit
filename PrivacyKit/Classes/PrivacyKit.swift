@@ -7,15 +7,19 @@
 
 import Foundation
 
-public class PrivacyKit: PrivacyKitConfigure, PrivacyKitState, PrivacyKitStyle {
+public class PrivacyKit: PrivacyKitConfigure, PrivacyKitState, PrivacyKitAttrText {
     
     /** Shared Singleton */
     public static let shared = PrivacyKit()
     
     /** Data Model */
-    let privacyModel = PrivacyModel()
+    let privacyModel: PrivacyModel
+    
+    /** **/
+    var style: PrivacyKitStyle
     
     /** Configuration Parameters */
+    var includeBlur: Bool = false
     var includeDeny: Bool = true
     
     /** Default Data */
@@ -49,11 +53,18 @@ public class PrivacyKit: PrivacyKitConfigure, PrivacyKitState, PrivacyKitStyle {
     var termsOfServiceLinkRange: NSRange?
     
     /** Default Atributes */
-    var paragraphAttr: [NSAttributedString.Key: Any] = PrivacyKitUI.stringAttributes.paragraph
-    var highlightAttr: [NSAttributedString.Key: Any] = PrivacyKitUI.stringAttributes.highlights
+    var paragraphAttr: [NSAttributedString.Key: Any]
+    var highlightAttr: [NSAttributedString.Key: Any]
     
     init() {
         /** Fetch or Build Default Privacy Data State */
+        privacyModel = PrivacyModel()
         privacyModel.persist()
+        
+        /** Configure the Privacy Style **/
+        style = DefaultPrivacyKitStyle()
+        
+        paragraphAttr = style.paragraphAttrText
+        highlightAttr = style.highlightsAttrText
     }
 }

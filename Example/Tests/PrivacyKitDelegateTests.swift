@@ -13,26 +13,36 @@ import Nimble
 class TestDelegateVC: UIViewController, PrivacyKitDelegate {
 
     var presented: Bool?
-    var presentedType: UIViewController?
+    var presentedNoticeVC: PrivacyNoticeVC?
+    var presentedAlertVC: UIAlertController?
     var presentWasAnimated: Bool?
     var presentHadCompletion: Bool?
 
-    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
+    override func present(_ viewControllerToPresent: UIViewController,
+                          animated flag: Bool,
+                          completion: (() -> Void)? = nil) {
+        /** Run the Layout Functions to Ensure the Presented View Layout Subs Works **/
+        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
+
         self.presented = true
-        self.presentedType = viewControllerToPresent
+        self.presentedNoticeVC = viewControllerToPresent as? PrivacyNoticeVC
+        self.presentedAlertVC = viewControllerToPresent as? UIAlertController
+        self.presentWasAnimated = flag
+        self.presentHadCompletion = completion != nil
     }
 }
 
 class TestNoticeVC: PrivacyNoticeVC {
 
-    var presented: Bool?
-    var presentedType: UIViewController?
-    var presentWasAnimated: Bool?
-    var presentHadCompletion: Bool?
+    var dismissed: Bool?
+    var dismissWasAnimated: Bool?
+    var dismissHadCompletion: Bool?
 
-    override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-        self.presented = true
-        self.presentedType = viewControllerToPresent
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        self.dismissed = true
+        self.dismissWasAnimated = flag
+        self.dismissHadCompletion = completion != nil
     }
 }
 
@@ -41,34 +51,38 @@ class TestPrivacyKitDelegate: QuickSpec {
         it("is presents the bottom PrivacyNoticeVC") {
             let delegateVC = TestDelegateVC()
 
-            delegateVC.requirePrivacy(.bottom, completion: nil)
+            delegateVC.requirePrivacy(.bottom)
 
             expect(delegateVC.presented).toEventually(beTrue())
+            expect(delegateVC.presentedNoticeVC).toEventually(beAnInstanceOf(BottomNoticeVC.self))
         }
 
         it("is presents the top PrivacyNoticeVC") {
             let delegateVC = TestDelegateVC()
 
-            delegateVC.requirePrivacy(.top, completion: nil)
+            delegateVC.requirePrivacy(.top)
 
             expect(delegateVC.presented).toEventually(beTrue())
+            expect(delegateVC.presentedNoticeVC).toEventually(beAnInstanceOf(TopNoticeVC.self))
         }
 
         it("presents the alert VC") {
             let delegateVC = TestDelegateVC()
 
-            delegateVC.requirePrivacy(.alert, completion: nil)
+            delegateVC.requirePrivacy(.alert)
 
             expect(delegateVC.presented).toEventually(beTrue())
+            expect(delegateVC.presentedAlertVC).toEventually(beAnInstanceOf(UIAlertController.self))
         }
 
         it("presents the custom VC") {
             let delegateVC = TestDelegateVC()
             let noticeVC = TestNoticeVC()
 
-            delegateVC.requirePrivacy(privacyViewController: noticeVC, completion: nil)
+            delegateVC.requirePrivacy(privacyViewController: noticeVC)
 
             expect(delegateVC.presented).toEventually(beTrue())
+            expect(delegateVC.presentedNoticeVC).toEventually(beAnInstanceOf(TestNoticeVC.self))
         }
     }
 }

@@ -9,8 +9,8 @@ import Foundation
 
 
 public protocol PrivacyKitDelegate {
-    func requirePrivacy(_ viewType: PrivacyNoticeType, completion: PrivacyCompletion?)
-    func requirePrivacy(privacyViewController: PrivacyNoticeVC, completion: PrivacyCompletion?)
+    func requirePrivacy(_ viewType: PrivacyNoticeType, _ completion: PrivacyCompletion?)
+    func requirePrivacy(privacyViewController: PrivacyNoticeVC, _ completion: PrivacyCompletion?)
 }
 
 extension PrivacyKitDelegate where Self: UIViewController {
@@ -23,19 +23,19 @@ extension PrivacyKitDelegate where Self: UIViewController {
     ///               View Controller Appears on the screen.
     ///   - completion: The completion to run when the privacy notice is accepted or denied.
     ///                 This allows custom actions to occur when privacy is completed.
-    public func requirePrivacy(_ viewType: PrivacyNoticeType = .bottom, completion: PrivacyCompletion? = nil) {
+    public func requirePrivacy(_ viewType: PrivacyNoticeType = .bottom, _ completion: PrivacyCompletion? = nil) {
         if PrivacyKit.shared.privacyModel.privacyAccepted == false {
-            self.presentPrivacyNotice(viewType, completion: completion)
+            self.presentPrivacyNotice(viewType, completion)
         }
     }
     
-    public func requirePrivacy(privacyViewController: PrivacyNoticeVC, completion: PrivacyCompletion? = nil) {
+    public func requirePrivacy(privacyViewController: PrivacyNoticeVC, _ completion: PrivacyCompletion? = nil) {
         if PrivacyKit.shared.privacyModel.privacyAccepted == false {
-            self.presentPrivacyNotice(viewController: privacyViewController, completion: completion)
+            self.presentPrivacyNotice(viewController: privacyViewController, completion)
         }
     }
     
-    private func presentPrivacyNotice(_ viewType: PrivacyNoticeType = .bottom, completion: PrivacyCompletion? = nil) {
+    private func presentPrivacyNotice(_ viewType: PrivacyNoticeType = .bottom, _ completion: PrivacyCompletion? = nil) {
         var viewController: PrivacyNoticeVC?
         
         switch viewType {
@@ -47,10 +47,10 @@ extension PrivacyKitDelegate where Self: UIViewController {
             viewController = BottomNoticeVC()
         }
         
-        presentPrivacyNotice(viewController: viewController!, completion: completion)
+        presentPrivacyNotice(viewController: viewController!)
     }
     
-    private func presentPrivacyNotice(viewController: PrivacyNoticeVC, completion: PrivacyCompletion? = nil) {
+    private func presentPrivacyNotice(viewController: PrivacyNoticeVC, _ completion: PrivacyCompletion? = nil) {
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .overCurrentContext
         viewController.privacyCompletion = completion
@@ -69,7 +69,7 @@ extension PrivacyKitDelegate where Self: UIViewController {
             completion?(PrivacyKit.shared.privacyAccepted(), PrivacyKit.shared.privacyDenied())
         }
         
-        let denyAction = UIAlertAction(title: "Deny Privacy", style: .default) { (action) in
+        let denyAction = UIAlertAction(title: "Deny Privacy", style: .destructive) { (action) in
             PrivacyKit.shared.denyPrivacy()
             completion?(PrivacyKit.shared.privacyAccepted(), PrivacyKit.shared.privacyDenied())
         }

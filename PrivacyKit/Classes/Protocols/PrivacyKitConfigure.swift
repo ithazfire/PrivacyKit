@@ -11,6 +11,8 @@ public protocol PrivacyKitConfigure {
     func config(_ privacyPolicyLink: String)
     func config(_ privacyPolicyLink: String, _ termsOfServiceLink: String)
     
+    func setBlurView(isEnabled enabled: Bool)
+    func setStyle(_ style: PrivacyKitStyle)
     func setTitle(_ title: String)
     func setMessage(_ message: String, privacyPolicyLinkText: String?, termsLinkText: String?)
     
@@ -28,6 +30,19 @@ public extension PrivacyKitConfigure where Self: PrivacyKit {
     func config(_ privacyPolicyLink: String, _ termsOfServiceLink: String) {
         self.privacyPolicyLink = privacyPolicyLink
         self.termsOfServiceLink = termsOfServiceLink
+        
+        self.buildDescription()
+    }
+    
+    func setBlurView(isEnabled enabled: Bool) {
+        self.includeBlur = enabled
+    }
+    
+    func setStyle(_ style: PrivacyKitStyle) {
+        self.style = style
+        
+        paragraphAttr = style.paragraphAttrText
+        highlightAttr = style.highlightsAttrText
         
         self.buildDescription()
     }
