@@ -17,6 +17,10 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 <img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-Basic.jpg" alt="Basic Example Screenshot" width="376px"/>
+<img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-CustomStyle-Top.jpg" alt="Custom Example Screenshot" width="376px"/>
+<img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-Alert.jpg" alt="Custom Example Screenshot" width="376px"/>
+
+* **[Video Demonstration](https://youtu.be/Ylmr647w4dY)**
 
 ## Installation
 
@@ -41,7 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         /** Configure PrivacyKit Globally */
-        PrivacyKit.shared.config("https://github.com/ithazfire/PrivacyKit")
+        PrivacyKit.shared.config("https://github.com/ithazfire/PrivacyKit",
+                                 "https://github.com/ithazfire/PrivacyKit/wiki")
+
+        /** Use Custom Style (Colors & Fonts) **/        PrivacyKit.shared.setStyle(CustomPrivacyKitStyle())
+
+        /** User Blur Effect Over Presenting View Controller **/          PrivacyKit.shared.setBlurView(isEnabled: true)
 
         // Override point for customization after application launch.
         return true

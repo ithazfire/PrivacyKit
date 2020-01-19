@@ -124,7 +124,13 @@
 
 <p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
 
-<p><img src="Guides/img/PrivacyKit-Basic.jpg" alt="Basic Example Screenshot" width="376px"/></p>
+<p><img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-Basic.jpg" alt="Basic Example Screenshot" width="376px"/>
+<img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-CustomStyle-Top.jpg" alt="Custom Example Screenshot" width="376px"/>
+<img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-Alert.jpg" alt="Custom Example Screenshot" width="376px"/></p>
+
+<ul>
+<li><strong><a href="https://youtu.be/Ylmr647w4dY">Video Demonstration</a></strong></li>
+</ul>
 <h2 id='installation' class='heading'>Installation</h2>
 
 <p>PrivacyKit is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
@@ -143,7 +149,12 @@ it, simply add the following line to your Podfile:</p>
     <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
 
         <span class="cm">/** Configure PrivacyKit Globally */</span>
-        <span class="kt">PrivacyKit</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">config</span><span class="p">(</span><span class="s">"https://github.com/ithazfire/PrivacyKit"</span><span class="p">)</span>
+        <span class="kt">PrivacyKit</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">config</span><span class="p">(</span><span class="s">"https://github.com/ithazfire/PrivacyKit"</span><span class="p">,</span>
+                                 <span class="s">"https://github.com/ithazfire/PrivacyKit/wiki"</span><span class="p">)</span>
+
+        <span class="cm">/** Use Custom Style (Colors &amp; Fonts) **/</span>        <span class="kt">PrivacyKit</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setStyle</span><span class="p">(</span><span class="kt">CustomPrivacyKitStyle</span><span class="p">())</span>
+
+        <span class="cm">/** User Blur Effect Over Presenting View Controller **/</span>          <span class="kt">PrivacyKit</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setBlurView</span><span class="p">(</span><span class="nv">isEnabled</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
 
         <span class="c1">// Override point for customization after application launch.</span>
         <span class="k">return</span> <span class="kc">true</span>

@@ -22,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                  "https://github.com/ithazfire/PrivacyKit/wiki")
 
         /** Use Custom Style (Colors & Fonts) **/
-        PrivacyKit.shared.setStyle(CustomPrivacyKitStyle())
+//        PrivacyKit.shared.setStyle(CustomPrivacyKitStyle())
 
         /** User Blur Effect Over Presenting View Controller **/
-        PrivacyKit.shared.setBlurView(isEnabled: true)
+//        PrivacyKit.shared.setBlurView(isEnabled: true)
 
         return true
     }
