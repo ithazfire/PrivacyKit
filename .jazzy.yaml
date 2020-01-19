@@ -6,7 +6,8 @@ podspec: PrivacyKit.podspec
 # module_version: 1.0.0
 # module: PrivacyKit
 # framework_root: PrivacyKit/
-documentation: Guides/*.md
+root_url: "https://ithazfire.github.io/PrivacyKit"
+documentation: Guides/**
 copyright: Copyright © 2020 It Haz Fire.
 # min_acl: private
 # output: docs

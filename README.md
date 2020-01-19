@@ -16,7 +16,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-<img src="Guides/img/PrivacyKit-Basic.jpg" alt="Basic Example Screenshot" width="376px"/>
+<img src="docs/img/PrivacyKit-Basic.jpg" alt="Basic Example Screenshot" width="376px"/>
 
 ## Installation
 
