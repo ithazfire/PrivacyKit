@@ -14,6 +14,6 @@ before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/PrivacyKit.xcworkspace -scheme PrivacyKit-Example -sdk iphonesimulator13.2 -destination "platform=iOS Simulator,name=iPhone 7 Plus" ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/PrivacyKit.xcworkspace -scheme PrivacyKit-Example -sdk iphonesimulator13.2 -destination "platform=iOS Simulator,name=iPhone 11 Pro Max" ONLY_ACTIVE_ARCH=NO | xcpretty
 # - set -o pipefail && xcodebuild test -destinations -enableCodeCoverage YES -workspace Example/PrivacyKit.xcworkspace -scheme PrivacyKit-Example -sdk iphonesimulator13.2 ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
