@@ -15,7 +15,7 @@ PODS:
   - Nimble-Snapshots/Core (6.9.1):
     - iOSSnapshotTestCase (~> 5.0)
     - Nimble (~> 7.0)
-  - PrivacyKit (0.1.7)
+  - PrivacyKit (1.0.0)
   - Quick (2.2.0)
   - SwiftLint (0.38.2)
 
@@ -45,7 +45,7 @@ SPEC CHECKSUMS:
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
-  PrivacyKit: b72cd842cf58604f7a687c2826c892179fbce801
+  PrivacyKit: 31b87bc172287ef797e8c11b908be0ff97de5d83
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
 

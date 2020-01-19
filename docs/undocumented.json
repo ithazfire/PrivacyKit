@@ -1,0 +1,467 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/PrivacyKit.swift",
+      "line": 10,
+      "symbol": "PrivacyKit",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/PrivacyKit.swift",
+      "line": 11,
+      "symbol": "PrivacyKit",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/PrivacyKitDelegate.swift",
+      "line": 10,
+      "symbol": "PrivacyAccepted",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/PrivacyKitDelegate.swift",
+      "line": 11,
+      "symbol": "PrivacyDenied",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/PrivacyKitDelegate.swift",
+      "line": 12,
+      "symbol": "PrivacyCompletion",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/PrivacyKitDelegate.swift",
+      "line": 14,
+      "symbol": "PrivacyKitDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/PrivacyKitDelegate.swift",
+      "line": 15,
+      "symbol": "PrivacyKitDelegate.requirePrivacy(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/PrivacyKitDelegate.swift",
+      "line": 16,
+      "symbol": "PrivacyKitDelegate.requirePrivacy(privacyViewController:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/PrivacyKitDelegate.swift",
+      "line": 19,
+      "symbol": "PrivacyKitDelegate",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitAttrText.swift",
+      "line": 10,
+      "symbol": "PrivacyKitAttrText",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitAttrText.swift",
+      "line": 11,
+      "symbol": "PrivacyKitAttrText.getLinkTextAttributes()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitAttrText.swift",
+      "line": 14,
+      "symbol": "PrivacyKitAttrText",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitAttrText.swift",
+      "line": 15,
+      "symbol": "PrivacyKitAttrText.getLinkTextAttributes()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitConfigure.swift",
+      "line": 10,
+      "symbol": "PrivacyKitConfigure",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitConfigure.swift",
+      "line": 11,
+      "symbol": "PrivacyKitConfigure.config(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitConfigure.swift",
+      "line": 12,
+      "symbol": "PrivacyKitConfigure.config(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitConfigure.swift",
+      "line": 14,
+      "symbol": "PrivacyKitConfigure.setBlurView(isEnabled:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitConfigure.swift",
+      "line": 15,
+      "symbol": "PrivacyKitConfigure.setStyle(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitConfigure.swift",
+      "line": 16,
+      "symbol": "PrivacyKitConfigure.setTitle(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitConfigure.swift",
+      "line": 17,
+      "symbol": "PrivacyKitConfigure.setMessage(_:privacyPolicyLinkText:termsLinkText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitConfigure.swift",
+      "line": 19,
+      "symbol": "PrivacyKitConfigure.enableDeny()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitConfigure.swift",
+      "line": 20,
+      "symbol": "PrivacyKitConfigure.disableDeny()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitConfigure.swift",
+      "line": 23,
+      "symbol": "PrivacyKitConfigure",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitDescription.swift",
+      "line": 13,
+      "symbol": "PrivacyKit.getDescription()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 10,
+      "symbol": "PrivacyKitState",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 11,
+      "symbol": "PrivacyKitState.acceptPrivacy()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 12,
+      "symbol": "PrivacyKitState.denyPrivacy()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 14,
+      "symbol": "PrivacyKitState.setPrivacy(accepted:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 15,
+      "symbol": "PrivacyKitState.setPrivacy(denied:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 17,
+      "symbol": "PrivacyKitState.tapPrivacyPolicy()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 18,
+      "symbol": "PrivacyKitState.tapTermsOfService()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 20,
+      "symbol": "PrivacyKitState.setPrivacyRead(read:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 21,
+      "symbol": "PrivacyKitState.setTermsRead(read:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 23,
+      "symbol": "PrivacyKitState.privacyAccepted()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 24,
+      "symbol": "PrivacyKitState.privacyDenied()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 26,
+      "symbol": "PrivacyKitState.privacyTapped()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 27,
+      "symbol": "PrivacyKitState.termsTapped()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 29,
+      "symbol": "PrivacyKitState.resetState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 30,
+      "symbol": "PrivacyKitState.getState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 33,
+      "symbol": "PrivacyKitState",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 34,
+      "symbol": "PrivacyKitState.acceptPrivacy()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 39,
+      "symbol": "PrivacyKitState.denyPrivacy()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 44,
+      "symbol": "PrivacyKitState.setPrivacy(accepted:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 49,
+      "symbol": "PrivacyKitState.setPrivacy(denied:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 54,
+      "symbol": "PrivacyKitState.tapPrivacyPolicy()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 59,
+      "symbol": "PrivacyKitState.tapTermsOfService()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 64,
+      "symbol": "PrivacyKitState.setPrivacyRead(read:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 69,
+      "symbol": "PrivacyKitState.setTermsRead(read:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 74,
+      "symbol": "PrivacyKitState.privacyAccepted()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 78,
+      "symbol": "PrivacyKitState.privacyDenied()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 82,
+      "symbol": "PrivacyKitState.privacyTapped()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 86,
+      "symbol": "PrivacyKitState.termsTapped()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 90,
+      "symbol": "PrivacyKitState.resetState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Protocols/PrivacyKitState.swift",
+      "line": 98,
+      "symbol": "PrivacyKitState.getState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Style/DefaultPrivacyKitStyle.swift",
+      "line": 10,
+      "symbol": "DefaultPrivacyKitStyle",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Style/PrivacyKitStyle.swift",
+      "line": 38,
+      "symbol": "PrivacyKitStyle.paragraphAttrText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Style/PrivacyKitStyle.swift",
+      "line": 39,
+      "symbol": "PrivacyKitStyle.highlightsAttrText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Style/PrivacyKitStyle.swift",
+      "line": 43,
+      "symbol": "PrivacyKitStyle.paragraphAttrText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/Style/PrivacyKitStyle.swift",
+      "line": 51,
+      "symbol": "PrivacyKitStyle.highlightsAttrText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/View Controllers/PrivacyNoticeVC.swift",
+      "line": 10,
+      "symbol": "PrivacyNoticeVC",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/View Controllers/PrivacyNoticeVC.swift",
+      "line": 67,
+      "symbol": "PrivacyNoticeVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/View Controllers/PrivacyNoticeVC.swift",
+      "line": 120,
+      "symbol": "PrivacyNoticeVC.denyPrivacy()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/View Controllers/PrivacyNoticeVCEnum.swift",
+      "line": 10,
+      "symbol": "PrivacyNoticeType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/View Controllers/PrivacyNoticeVCEnum.swift",
+      "line": 11,
+      "symbol": "PrivacyNoticeType.top",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/View Controllers/PrivacyNoticeVCEnum.swift",
+      "line": 12,
+      "symbol": "PrivacyNoticeType.bottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob/Git/PrivacyKit/PrivacyKit/Classes/View Controllers/PrivacyNoticeVCEnum.swift",
+      "line": 13,
+      "symbol": "PrivacyNoticeType.alert",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/jacob/Git/PrivacyKit"
+}

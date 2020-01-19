@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Customizing  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Customizing  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">PrivacyKit Docs</a> (31% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">PrivacyKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Customizing  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="customizing.html">Customizing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Privacy.html">Privacy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PrivacyKit.html">PrivacyKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PrivacyNoticeVC.html">PrivacyNoticeVC</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/PrivacyNoticeType.html">PrivacyNoticeType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/PrivacyKitAttrText.html">PrivacyKitAttrText</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PrivacyKitConfigure.html">PrivacyKitConfigure</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PrivacyKitDelegate.html">PrivacyKitDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PrivacyKitState.html">PrivacyKitState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PrivacyKitStyle.html">PrivacyKitStyle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/DefaultPrivacyKitStyle.html">DefaultPrivacyKitStyle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10PrivacyKit0A8Accepteda">PrivacyAccepted</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10PrivacyKit0A10Completiona">PrivacyCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10PrivacyKit0A6Denieda">PrivacyDenied</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='customizing-privacy-kit' class='heading'>Customizing Privacy Kit</h1>
+
+<p>PrivacyKit allows multiple methods for customization using both the
+<code><a href="Protocols/PrivacyKitStyle.html">PrivacyKitStyle</a></code> protocol and the custom Privacy Notice ViewController</p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+
+<p><img src="https://github.com/ithazfire/PrivacyKit/Docs/img/PrivacyKit-CustomStyle.jpg" alt="Custom Style Example Screenshot" width="376px"/></p>
+<h2 id='making-a-custom-privacykitstyle' class='heading'>Making a Custom PrivacyKitStyle</h2>
+
+<p>Implementing a new PrivacyKitStyle inside your App can be done similar to
+the example below. A custom style allows you to modify the Privacy Notice
+colors, basic fonts, and the corner radius of the background.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">PrivacyKit</span>
+
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CustomPrivacyKitStyle</span><span class="p">:</span> <span class="kt">PrivacyKitStyle</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mi">252</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mi">202</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mi">70</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">textColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mi">35</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mi">61</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mi">77</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">buttonHighlightColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mi">97</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mi">155</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mi">138</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">errorColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mi">249</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mi">87</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mi">56</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">backgroundCornerRadius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">14</span>
+
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">paragraphFont</span><span class="p">:</span> <span class="kt">UIFont</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">systemFont</span><span class="p">(</span><span class="nv">ofSize</span><span class="p">:</span> <span class="mi">14</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">highlightFont</span><span class="p">:</span> <span class="kt">UIFont</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">boldSystemFont</span><span class="p">(</span><span class="nv">ofSize</span><span class="p">:</span> <span class="mi">14</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>To use the custom style, you need to set PrivacyKit&rsquo;s style before
+requiring privacy. This can be done inside the AppDelegate after you call
+configure.</p>
+<pre class="highlight swift"><code><span class="kt">PrivacyKit</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">config</span><span class="p">(</span><span class="s">"https://example.com/privacy"</span><span class="p">)</span>
+<span class="kt">PrivacyKit</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setStyle</span><span class="p">(</span><span class="kt">CustomPrivacyKitStyle</span><span class="p">())</span>
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright © 2020 It Haz Fire.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
