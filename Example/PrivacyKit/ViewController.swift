@@ -121,8 +121,6 @@ class ViewController: UIViewController, PrivacyKitDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        print("ViewController.viewDidAppear")
-
         self.requirePrivacy(.bottom) { (accepted, denied) in
             if denied {
                 print("PrivacyKit: completed with denied.")

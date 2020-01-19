@@ -4,16 +4,14 @@
 
 osx_image: xcode11.3
 language: objective-c
-# xcode_project: Example/PrivacyKit.xcodeproj
-# xcode_scheme: PrivacyKit-Example
-xcode_destination: platform=iOS Simulator,OS=13.2,name=iPhone 7 Plus
 
 cache: cocoapods
 podfile: Example/Podfile
 before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
+- gem install cocoapods
 script:
 - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/PrivacyKit.xcworkspace -scheme PrivacyKit-Example -sdk iphonesimulator13.2 -destination "platform=iOS Simulator,name=iPhone 11 Pro Max" ONLY_ACTIVE_ARCH=NO | xcpretty
-# - set -o pipefail && xcodebuild test -destinations -enableCodeCoverage YES -workspace Example/PrivacyKit.xcworkspace -scheme PrivacyKit-Example -sdk iphonesimulator13.2 ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
+# - sbt clean coverage test
+# after_success:
+# - sbt coveralls

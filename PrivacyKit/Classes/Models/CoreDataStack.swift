@@ -8,20 +8,20 @@
 import UIKit
 import CoreData
 
-class CoreDataStack {
-    
+internal class CoreDataStack {
+
     static let shared = CoreDataStack()
-    
+
     lazy var applicationDocumentsDirectory: URL = {
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return urls[urls.count-1]
     }()
-    
+
     lazy var managedObjectModel: NSManagedObjectModel = {
         let modelURL = Bundle(for: CoreDataStack.self).url(forResource: "PrivacyDataModel", withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelURL)!
     }()
-    
+
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
@@ -36,7 +36,7 @@ class CoreDataStack {
             var dict = [String: AnyObject]()
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data" as AnyObject
             dict[NSLocalizedFailureReasonErrorKey] = failureReason as AnyObject
-            
+
             dict[NSUnderlyingErrorKey] = error as NSError
             let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
             // Replace this with code to handle the error appropriately.
@@ -44,17 +44,17 @@ class CoreDataStack {
             NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
             abort()
         }
-        
+
         return coordinator
     }()
-    
+
     lazy var managedObjectContext: NSManagedObjectContext = {
         let coordinator = self.persistentStoreCoordinator
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
     }()
-    
+
     // MARK: - Core Data Saving support
     func saveContext () {
         if managedObjectContext.hasChanges {
@@ -69,5 +69,5 @@ class CoreDataStack {
             }
         }
     }
-    
+
 }

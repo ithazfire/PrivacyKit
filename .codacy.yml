@@ -1,3 +1,7 @@
 exclude_paths:
-  - 'Example/Pods/**'
-  - 'Example/build/**'
+  - .git/**
+  - .github/**
+  - docs/**
+  - CODE_OF_CONDUCT.md
+  - Example/Pods/**
+  - Example/build/**

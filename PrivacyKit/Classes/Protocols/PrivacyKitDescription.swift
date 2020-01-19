@@ -9,22 +9,22 @@
 import Foundation
 
 public extension PrivacyKit {
-    
+
     func getDescription() -> NSMutableAttributedString? {
         return self.descriptionAttributed
     }
-    
+
     internal func buildDescription() {
         self.descriptionParts = self.splitMessage()
         self.descriptionAttributed = self.getAttributed()
         self.bindLinks()
     }
-    
+
     private func splitMessage() -> [String]? {
         if self.termsOfServiceLink != nil {
             if let privacyTextRange = self.termsOfServiceDescription.range(of: self.privacyPolicyText),
                 let termsTextRange = self.termsOfServiceDescription.range(of: self.termsOfServiceText) {
-                
+
                 if privacyTextRange.lowerBound > termsTextRange.upperBound {
                     self.descriptionParts = [
                         String(self.termsOfServiceDescription[..<termsTextRange.lowerBound]),
@@ -51,13 +51,13 @@ public extension PrivacyKit {
                 String(self.privacyDescription[privacyTextRange.upperBound...])
             ]
         }
-        
+
         return nil
     }
-    
+
     private func getAttributed() -> NSMutableAttributedString {
         let description = NSMutableAttributedString(string: String(""))
-        
+
         if let parts = self.descriptionParts {
             for part in parts {
                 var attributes: [NSAttributedString.Key: Any] = self.paragraphAttr
@@ -72,10 +72,10 @@ public extension PrivacyKit {
                 )
             }
         }
-        
+
         return description
     }
-    
+
     private func bindLinks() {
         if let privacyTextRange = self.descriptionAttributed?.mutableString.range(of: self.privacyPolicyText) {
             self.privacyPolicyLinkRange = privacyTextRange
@@ -83,7 +83,7 @@ public extension PrivacyKit {
                 self.descriptionAttributed?.addAttribute(.link, value: privacyLink, range: privacyTextRange)
             }
         }
-        
+
         if let termsOfServiceRange = self.descriptionAttributed?.mutableString.range(of: self.termsOfServiceText) {
             self.termsOfServiceLinkRange = termsOfServiceRange
             if let termsLink = self.termsOfServiceLink {
