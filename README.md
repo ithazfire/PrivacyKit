@@ -7,6 +7,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/ithazfire/PrivacyKit/badge.svg?branch=master)](https://coveralls.io/github/ithazfire/PrivacyKit?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec0c6633ce234ec09cab393f2828958f)](https://app.codacy.com/gh/ithazfire/PrivacyKit?utm_source=github.com&utm_medium=referral&utm_content=ithazfire/PrivacyKit&utm_campaign=Badge_Grade_Dashboard)
 
+## Documentation
+
+* **[Documentation](https://ithazfire.github.io/PrivacyKit)** - Detailed API Documentation for the PrivacyKit library.
+* **[How to Customize](https://ithazfire.github.io/PrivacyKit/customizing.html)** - Customizing the PrivacyKit ViewControllers.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
