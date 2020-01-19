@@ -12,9 +12,9 @@ public protocol PrivacyKitStyle {
     var textColor: UIColor { get }
     var buttonHighlightColor: UIColor { get }
     var errorColor: UIColor { get }
-    
+
     var backgroundCornerRadius: CGFloat { get }
-    
+
     var paragraphFont: UIFont { get }
     var highlightFont: UIFont { get }
 

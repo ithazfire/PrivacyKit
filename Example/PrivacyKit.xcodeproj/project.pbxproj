@@ -335,7 +335,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\n  echo \"Swiftlint autocorrect and view complete.\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		243BD6C29F8A5B9E1DC5C383 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -568,9 +568,11 @@
 			baseConfigurationReference = 67B870B7A1965D22D26538F1 /* Pods-PrivacyKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_TEAM = 85DLV3WQZZ;
 				INFOPLIST_FILE = PrivacyKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.PrivacyKit.PrivacyKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -584,9 +586,11 @@
 			baseConfigurationReference = CCAFCCFA24B129860C9A646E /* Pods-PrivacyKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_TEAM = 85DLV3WQZZ;
 				INFOPLIST_FILE = PrivacyKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.PrivacyKit.PrivacyKit-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
