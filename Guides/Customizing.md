@@ -7,7 +7,7 @@ PrivacyKit allows multiple methods for customization using both the
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-<img src="https://github.com/ithazfire/PrivacyKit/Docs/img/PrivacyKit-CustomStyle.jpg" alt="Custom Style Example Screenshot" width="376px"/>
+<img src="img/PrivacyKit-CustomStyle.jpg" alt="Custom Style Example Screenshot" width="376px"/>
 
 ## Making a Custom PrivacyKitStyle
 
