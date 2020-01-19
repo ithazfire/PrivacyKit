@@ -17,10 +17,6 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 <img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-Basic.jpg" alt="Basic Example Screenshot" width="376px"/>
-<img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-CustomStyle-Top.jpg" alt="Custom Example Screenshot" width="376px"/>
-<img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-Alert.jpg" alt="Custom Example Screenshot" width="376px"/>
-
-* **[Video Demonstration](https://youtu.be/Ylmr647w4dY)**
 
 ## Installation
 
@@ -69,6 +65,13 @@ class ViewController: UIViewController, PrivacyKitDelegate {
     }
 }
 ```
+
+## More Examples
+
+<img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-CustomStyle-Top.jpg" alt="Custom Example Screenshot" width="376px"/>
+<img src="https://github.com/ithazfire/PrivacyKit/raw/master/Guides/img/PrivacyKit-Alert.jpg" alt="Custom Example Screenshot" width="376px"/>
+
+* **[Video Demonstration](https://youtu.be/Ylmr647w4dY)**
 
 ## Author
 
