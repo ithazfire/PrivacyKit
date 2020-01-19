@@ -14,6 +14,8 @@
 		16D7A0A623D3A13D0073A805 /* CustomNoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0A523D3A13D0073A805 /* CustomNoticeVC.swift */; };
 		16D7A0AE23D3ADE60073A805 /* CustomPrivacyKitStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0AD23D3ADE60073A805 /* CustomPrivacyKitStyle.swift */; };
 		16D7A0BD23D429290073A805 /* PrivacyKitTopVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0BB23D428D40073A805 /* PrivacyKitTopVCTests.swift */; };
+		16D7A0BF23D42AC80073A805 /* PrivacyKitBottomVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0BE23D42AC80073A805 /* PrivacyKitBottomVCTests.swift */; };
+		16D7A0C123D42AD50073A805 /* PrivacyKitPrivacyVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0C023D42AD50073A805 /* PrivacyKitPrivacyVCTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		16D7A0A523D3A13D0073A805 /* CustomNoticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNoticeVC.swift; sourceTree = "<group>"; };
 		16D7A0AD23D3ADE60073A805 /* CustomPrivacyKitStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPrivacyKitStyle.swift; sourceTree = "<group>"; };
 		16D7A0BB23D428D40073A805 /* PrivacyKitTopVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitTopVCTests.swift; sourceTree = "<group>"; };
+		16D7A0BE23D42AC80073A805 /* PrivacyKitBottomVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitBottomVCTests.swift; sourceTree = "<group>"; };
+		16D7A0C023D42AD50073A805 /* PrivacyKitPrivacyVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitPrivacyVCTests.swift; sourceTree = "<group>"; };
 		43DBA13BBFBC97D64AA7C997 /* PrivacyKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PrivacyKit.podspec; path = ../PrivacyKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		558B6ACB578E661CF7FDF219 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PrivacyKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivacyKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +143,8 @@
 				16A6356A23D1949400FD7195 /* PrivacyKitDescriptionTests.swift */,
 				16489DF323D28E5B00DE414D /* PrivacyKitDelegateTests.swift */,
 				16D7A0BB23D428D40073A805 /* PrivacyKitTopVCTests.swift */,
+				16D7A0BE23D42AC80073A805 /* PrivacyKitBottomVCTests.swift */,
+				16D7A0C023D42AD50073A805 /* PrivacyKitPrivacyVCTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -412,9 +418,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				16A6357223D197CB00FD7195 /* PrivacyKitConfigureTests.swift in Sources */,
+				16D7A0C123D42AD50073A805 /* PrivacyKitPrivacyVCTests.swift in Sources */,
 				16A6356F23D195C100FD7195 /* PrivacyKitStateTests.swift in Sources */,
 				16D7A0BD23D429290073A805 /* PrivacyKitTopVCTests.swift in Sources */,
 				16A6356C23D194BB00FD7195 /* PrivacyKitDescriptionTests.swift in Sources */,
+				16D7A0BF23D42AC80073A805 /* PrivacyKitBottomVCTests.swift in Sources */,
 				16489DF523D28F1300DE414D /* PrivacyKitDelegateTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* PrivacyKitBasicsTests.swift in Sources */,
 			);

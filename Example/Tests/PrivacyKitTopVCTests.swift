@@ -12,9 +12,16 @@ import Nimble
 
 class TestPrivacyKitTopVC: QuickSpec {
     override func spec() {
-        it("is true truthy") {
+        it("should run TopNoticeVC viewDidLoad and viewDidLayoutSubviews") {
             let topVC = TopNoticeVC()
-            
+
+            /** Excercise the View (Triggers viewDidLoad) **/
+            topVC.view.isHidden = false
+
+            /** Excercise the View's Layout **/
+            topVC.view.setNeedsLayout()
+            topVC.view.layoutIfNeeded()
+
             expect(topVC.view).toEventuallyNot(beNil())
         }
     }
