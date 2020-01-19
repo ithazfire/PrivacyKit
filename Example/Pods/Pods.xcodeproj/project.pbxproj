@@ -41,11 +41,9 @@
 		12884A23B3D5CC0808DEA9CCC8B3CE0B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E906E59597539202C0610CB360AA2AC /* XCTest.framework */; };
 		14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA005DB33AD81550EBE895924732DD8 /* UIImage+Diff.m */; };
 		14C511527597E5846AB2627F791C7D8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69EB16895D0FDA9699EED91A3CFB841 /* QuartzCore.framework */; };
-		16489E0123D2920F00DE414D /* PrivacyKitTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16489E0023D2920F00DE414D /* PrivacyKitTypes.swift */; };
 		1662BEDD868AF1CD729C4269E69A3580 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CFEA1E5498362BB7B5B4230B6FB30 /* MatcherFunc.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		16D7A0AC23D3AB000073A805 /* PrivacyKitStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0A723D3A7160073A805 /* PrivacyKitStyle.swift */; };
 		16D7A0B123D3AF3A0073A805 /* DefaultPrivacyKitStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0AF23D3AF1D0073A805 /* DefaultPrivacyKitStyle.swift */; };
-		16D7A0C323D42DFF0073A805 /* PrivacyKitTypealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0C223D42DFF0073A805 /* PrivacyKitTypealiases.swift */; };
 		1A45E0C96DB0A5F7A77C3B7A7E59BDA9 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = EC4F9A92723B3006A5A44FCC6A6DF887 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EA797B70F587D59DD66A07503CD95D7 /* CwlCatchException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1073401E7388989EF49D8CCD587DDF /* CwlCatchException.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		22E1EDBF560583A04FC4C30267BD408A /* URL+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BFC440EBE8A3CCB7CE47803D92D69A /* URL+FileName.swift */; };
@@ -304,11 +302,9 @@
 		148E9B9B88A6C299608B94017E20CF78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		14DAE67D23207744A4550139260510B4 /* Quick-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Quick-Info.plist"; sourceTree = "<group>"; };
 		15F1857EA8F6B29777550F1E72067CDA /* ErrorUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorUtility.swift; path = Sources/Quick/ErrorUtility.swift; sourceTree = "<group>"; };
-		16489E0023D2920F00DE414D /* PrivacyKitTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitTypes.swift; sourceTree = "<group>"; };
 		16CD28E1DE279B514D574920221B3688 /* Nimble-Snapshots-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nimble-Snapshots-Info.plist"; sourceTree = "<group>"; };
 		16D7A0A723D3A7160073A805 /* PrivacyKitStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitStyle.swift; sourceTree = "<group>"; };
 		16D7A0AF23D3AF1D0073A805 /* DefaultPrivacyKitStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPrivacyKitStyle.swift; sourceTree = "<group>"; };
-		16D7A0C223D42DFF0073A805 /* PrivacyKitTypealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitTypealiases.swift; sourceTree = "<group>"; };
 		1746781E703E8957F01770F72A233BDC /* Pods-PrivacyKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrivacyKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1786F6C7497B5A36E8CD73157D9195AE /* HaveValidDynamicTypeSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaveValidDynamicTypeSnapshot.swift; path = DynamicType/HaveValidDynamicTypeSnapshot.swift; sourceTree = "<group>"; };
 		17F397558E46EC72BE7BB881EC9FB7A6 /* BeVoid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeVoid.swift; path = Sources/Nimble/Matchers/BeVoid.swift; sourceTree = "<group>"; };
@@ -622,16 +618,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		16489DF923D2916E00DE414D /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				16489E0023D2920F00DE414D /* PrivacyKitTypes.swift */,
-				16D7A0C223D42DFF0073A805 /* PrivacyKitTypealiases.swift */,
-			);
-			name = Types;
-			path = PrivacyKit/Types;
-			sourceTree = "<group>";
-		};
 		1848339BF561D7A31734E9D2E538AB76 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -650,7 +636,6 @@
 				FB6F169F0FA58D2170879D38B5CF337B /* Protocols */,
 				58E122F87342DCD50B9CE567E33FB352 /* Resources */,
 				CF6CFDED0272EEE4B8DA93BD0B4939AC /* Support Files */,
-				16489DF923D2916E00DE414D /* Types */,
 				0006A6F8DB7A0A9F3320E8F561D37CB8 /* Style */,
 				26CC844D902467EBF1331F65DA27F1B0 /* View Controllers */,
 			);
@@ -1507,7 +1492,6 @@
 				726614D84DDC910DE94519B3AA5853BE /* PrivacyKitConfigure.swift in Sources */,
 				ABE016D43185FDBA705FEC9CF13B396A /* PrivacyKitDelegate.swift in Sources */,
 				16D7A0B123D3AF3A0073A805 /* DefaultPrivacyKitStyle.swift in Sources */,
-				16489E0123D2920F00DE414D /* PrivacyKitTypes.swift in Sources */,
 				BD021CC9D44A088C17F2B30A8CCD1C43 /* PrivacyKitDescription.swift in Sources */,
 				76581854214D37B536A77A5408BBAF35 /* PrivacyKitErrors.swift in Sources */,
 				89D40AA17A54B1454D405D64D3E2C482 /* PrivacyKitState.swift in Sources */,
@@ -1516,7 +1500,6 @@
 				94432A4750301B2C108C0898EC19D2B7 /* PrivacyModel.swift in Sources */,
 				3516916EB6E86D9A09C0E07106B4E389 /* PrivacyNoticeVC.swift in Sources */,
 				482D78B4E0CAA7394ABCC57DEC36C855 /* PrivacyNoticeVCEnum.swift in Sources */,
-				16D7A0C323D42DFF0073A805 /* PrivacyKitTypealiases.swift in Sources */,
 				7F250928E0DF500A400A10D54CE0D4BF /* TopNoticeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
