@@ -1,13 +1,11 @@
 clean: true
 podspec: PrivacyKit.podspec
-# author: It Haz Fire LLC
-# author_url: https://ithazfire.com
-# github_url: https://github.com/ithazfire/PrivacyKit
+author: It Haz Fire LLC
+author_url: https://ithazfire.com
+github_url: https://github.com/ithazfire/PrivacyKit
 # module_version: 1.0.0
 # module: PrivacyKit
 # framework_root: PrivacyKit/
 root_url: "https://ithazfire.github.io/PrivacyKit"
 documentation: Guides/**
 copyright: Copyright © 2020 It Haz Fire.
-# min_acl: private
-# output: docs
