@@ -201,6 +201,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				1659253D23D181C600AE7D4C /* SwiftLint With Autocorrect */,
 				439036561B0284A036E81048 /* [CP] Embed Pods Frameworks */,
+				16D7A0C423D446F20073A805 /* Generate Docs With Jazzy */,
 			);
 			buildRules = (
 			);
@@ -336,6 +337,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\n  echo \"Swiftlint autocorrect and view complete.\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		16D7A0C423D446F20073A805 /* Generate Docs With Jazzy */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Docs With Jazzy";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which jazzy >/dev/null; then\n  jazzy\n  echo \"Autodocs generated with Jazzy\"\nelse\n  echo \"warning: Jazzy not installed, download from https://github.com/realm/Jazzy\"\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		243BD6C29F8A5B9E1DC5C383 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

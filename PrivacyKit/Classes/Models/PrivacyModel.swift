@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class PrivacyModel {
+internal class PrivacyModel {
 
     /** Core Data Stack */
     private let context = CoreDataStack.shared.managedObjectContext

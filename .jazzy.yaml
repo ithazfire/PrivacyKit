@@ -1,0 +1,12 @@
+clean: true
+author: It Haz Fire LLC
+author_url: https://ithazfire.com
+github_url: https://github.com/ithazfire/PrivacyKit
+module_version: 1.0.0
+# build-tool-arguments: -scheme,PrivacyKit
+module: PrivacyKit
+# framework_root: PrivacyKit/
+documentation: Docs/*.md
+copyright: Copyright © 2020 It Haz Fire.
+# min_acl: private
+output: PrivacyKit_Docs

@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class CoreDataStack {
+internal class CoreDataStack {
 
     static let shared = CoreDataStack()
 

@@ -29,7 +29,6 @@ has not been accepted.
   s.author           = { 'Archdoog' => 'jacob@ithazfire.com' }
   s.source           = { :git => 'https://github.com/ithazfire/PrivacyKit.git', :tag => s.version.to_s }
   s.swift_version    = '5.1'
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
