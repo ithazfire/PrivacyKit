@@ -8,8 +8,5 @@
 import Foundation
 
 enum PrivacyKitError: Error {
-    case noPrivacyPolicyLink
-    case noTermsOfServiceLink
-    case noPrivacyPolicyTextMatched
-    case noTermsOfServiceLinkMatched
+    case privacyDenied
 }

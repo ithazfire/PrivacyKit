@@ -110,18 +110,14 @@ open class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
 
     /** Action Functions */
     @objc open func acceptPrivacy() {
-        PrivacyKit.shared.acceptPrivacy()
-
-        self.privacyCompletion?(PrivacyKit.shared.privacyAccepted(), PrivacyKit.shared.privacyDenied())
-        print("Accept completion ran.")
+        PrivacyKit.shared.acceptPrivacy(self.privacyCompletion)
+        print("Accept completion should run: \(self.privacyCompletion).")
         self.dismiss(animated: true)
     }
 
     @objc open func denyPrivacy() {
-        PrivacyKit.shared.denyPrivacy()
-
-        self.privacyCompletion?(PrivacyKit.shared.privacyAccepted(), PrivacyKit.shared.privacyDenied())
-        print("Deny completion ran.")
+        PrivacyKit.shared.denyPrivacy(self.privacyCompletion)
+        print("Deny completion should run: \(self.privacyCompletion).")
         self.dismiss(animated: true)
     }
 
@@ -150,11 +146,13 @@ open class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
     public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         /** Registers the Link Tap For Privacy Policy */
         if URL.absoluteString == PrivacyKit.shared.privacyPolicyLink {
+            print("TAPPED PRIVACY POLICY")
             PrivacyKit.shared.tapPrivacyPolicy()
         }
 
         /** Registers the Link Tap For Terms of Service Link */
         if URL.absoluteString == PrivacyKit.shared.termsOfServiceLink {
+            print("TAPPED TERMS LINK")
             PrivacyKit.shared.tapTermsOfService()
         }
 

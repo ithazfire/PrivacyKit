@@ -8,17 +8,11 @@
 import Foundation
 
 public protocol PrivacyKitState {
-    func acceptPrivacy()
-    func denyPrivacy()
-
-    func setPrivacy(accepted: Bool)
-    func setPrivacy(denied: Bool)
+    func acceptPrivacy(_ completion: PrivacyCompletion?)
+    func denyPrivacy(_ completion: PrivacyCompletion?)
 
     func tapPrivacyPolicy()
     func tapTermsOfService()
-
-    func setPrivacyRead(read: Bool)
-    func setTermsRead(read: Bool)
 
     func privacyAccepted() -> Bool
     func privacyDenied() -> Bool
@@ -31,42 +25,42 @@ public protocol PrivacyKitState {
 }
 
 public extension PrivacyKitState where Self: PrivacyKit {
-    func acceptPrivacy() {
-        privacyModel.privacyAccepted = true
-        privacyModel.save()
+    func acceptPrivacy(_ completion: PrivacyCompletion? = nil) {
+        let accepted = true
+        self.setPrivacy(accepted: accepted)
+        completion?(.success(accepted))
     }
 
-    func denyPrivacy() {
-        privacyModel.privacyDenied = true
-        privacyModel.save()
+    func denyPrivacy(_ completion: PrivacyCompletion? = nil) {
+        let denied = true
+        self.setPrivacy(denied: denied)
+        completion?(.failure(PrivacyKitError.privacyDenied))
     }
 
-    func setPrivacy(accepted: Bool) {
+    func tapPrivacyPolicy() {
+        self.setPrivacyRead(read: true)
+    }
+
+    func tapTermsOfService() {
+        self.setTermsRead(read: true)
+    }
+
+    private func setPrivacy(accepted: Bool) {
         privacyModel.privacyAccepted = accepted
         privacyModel.save()
     }
 
-    func setPrivacy(denied: Bool) {
+    private func setPrivacy(denied: Bool) {
         privacyModel.privacyDenied = denied
         privacyModel.save()
     }
-
-    func tapPrivacyPolicy() {
-        privacyModel.privacyPolicyRead = true
-        privacyModel.save()
-    }
-
-    func tapTermsOfService() {
-        privacyModel.termsOfServiceRead = true
-        privacyModel.save()
-    }
-
-    func setPrivacyRead(read: Bool) {
+    
+    private func setPrivacyRead(read: Bool) {
         privacyModel.privacyPolicyRead = read
         privacyModel.save()
     }
 
-    func setTermsRead(read: Bool) {
+    private func setTermsRead(read: Bool) {
         privacyModel.termsOfServiceRead = read
         privacyModel.save()
     }

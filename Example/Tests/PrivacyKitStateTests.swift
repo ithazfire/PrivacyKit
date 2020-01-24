@@ -34,45 +34,5 @@ class TestPrivacyKitStateExtras: QuickSpec {
             expect(newState["privacyAccepted"] as? Bool).to(equal(false))
             expect(newState["privacyDenied"] as? Bool).to(equal(false))
         }
-
-        it("sets privacy accepted boolean") {
-            PrivacyKit.shared.resetState()
-
-            PrivacyKit.shared.setPrivacy(accepted: true)
-            expect(PrivacyKit.shared.privacyAccepted()).to(equal(true))
-
-            PrivacyKit.shared.setPrivacy(accepted: false)
-            expect(PrivacyKit.shared.privacyAccepted()).to(equal(false))
-        }
-
-        it("sets privacy denied boolean") {
-            PrivacyKit.shared.resetState()
-
-            PrivacyKit.shared.setPrivacy(denied: true)
-            expect(PrivacyKit.shared.privacyDenied()).to(equal(true))
-
-            PrivacyKit.shared.setPrivacy(denied: false)
-            expect(PrivacyKit.shared.privacyDenied()).to(equal(false))
-        }
-
-        it("sets privacy read boolean") {
-            PrivacyKit.shared.resetState()
-
-            PrivacyKit.shared.setPrivacyRead(read: true)
-            expect(PrivacyKit.shared.privacyTapped()).to(equal(true))
-
-            PrivacyKit.shared.setPrivacyRead(read: false)
-            expect(PrivacyKit.shared.privacyTapped()).to(equal(false))
-        }
-
-        it("sets terms read boolean") {
-            PrivacyKit.shared.resetState()
-
-            PrivacyKit.shared.setTermsRead(read: true)
-            expect(PrivacyKit.shared.termsTapped()).to(equal(true))
-
-            PrivacyKit.shared.setTermsRead(read: false)
-            expect(PrivacyKit.shared.termsTapped()).to(equal(false))
-        }
     }
 }

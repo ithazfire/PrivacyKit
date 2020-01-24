@@ -121,16 +121,13 @@ class ViewController: UIViewController, PrivacyKitDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        self.requirePrivacy(.bottom) { (accepted, denied) in
-            if denied {
-                print("PrivacyKit: completed with denied.")
+        self.requirePrivacy(.bottom) { result in
+            switch (result) {
+            case .success(let privacyAccepted):
+                print("PrivacyKit: privacy was accepted? \(privacyAccepted)")
+            case .failure(let error):
+                print("PrivacyKit: Error: \(error)")
             }
-
-            if accepted {
-                print("PrivacyKit: completed with accepted.")
-            }
-
-            print("PrivacyKit: ViewDidAppear Privacy Completion State: \(PrivacyKit.shared.getState())")
             self.updateLabels()
         }
     }
@@ -202,8 +199,13 @@ class ViewController: UIViewController, PrivacyKitDelegate {
         self.reset()
 
         print("PrivacyKit: Presenting Top Notice")
-        requirePrivacy(.top) { (accepted, denied) in
-            print("Top Privacy Notice completed with results... accepted: \(accepted), denied: \(denied)")
+        requirePrivacy(.top) { result in
+            switch (result) {
+            case .success(let privacyAccepted):
+                print("PrivacyKit.Top: privacy was accepted? \(privacyAccepted)")
+            case .failure(let error):
+                print("PrivacyKit.Top: Error: \(error)")
+            }
             self.updateLabels()
         }
     }
@@ -212,8 +214,13 @@ class ViewController: UIViewController, PrivacyKitDelegate {
         self.reset()
 
         print("PrivacyKit: Presenting Bottom Notice")
-        requirePrivacy(.bottom) { (accepted, denied) in
-            print("Bottom Privacy Notice completed with results... accepted: \(accepted), denied: \(denied)")
+        requirePrivacy(.bottom) { result in
+            switch (result) {
+            case .success(let privacyAccepted):
+                print("PrivacyKit.Bottom: privacy was accepted? \(privacyAccepted)")
+            case .failure(let error):
+                print("PrivacyKit.Bottom: Error: \(error)")
+            }
             self.updateLabels()
         }
     }
@@ -221,9 +228,13 @@ class ViewController: UIViewController, PrivacyKitDelegate {
     @objc func doAlert() {
         self.reset()
 
-        print("PrivacyKit: Presenting Alert Notice")
-        requirePrivacy(.alert) { (accepted, denied) in
-            print("Alert Privacy Notice completed with results... accepted: \(accepted), denied: \(denied)")
+        requirePrivacy(.alert) { result in
+            switch (result) {
+            case .success(let privacyAccepted):
+                print("PrivacyKit.Alert: privacy was accepted? \(privacyAccepted)")
+            case .failure(let error):
+                print("PrivacyKit.Alert: Error: \(error)")
+            }
             self.updateLabels()
         }
     }
@@ -231,9 +242,13 @@ class ViewController: UIViewController, PrivacyKitDelegate {
     @objc func doCustom() {
         self.reset()
 
-        print("PrivacyKit: Presenting Custom Notice")
-        requirePrivacy(privacyViewController: CustomNoticeVC()) { (accepted, denied) in
-            print("Custom Privacy Notice completed with results... accepted: \(accepted), denied: \(denied)")
+        requirePrivacy(privacyViewController: CustomNoticeVC()) { result in
+            switch (result) {
+            case .success(let privacyAccepted):
+                print("PrivacyKit.Custom: privacy was accepted? \(privacyAccepted)")
+            case .failure(let error):
+                print("PrivacyKit.Custom: Error: \(error)")
+            }
             self.updateLabels()
         }
     }
@@ -241,11 +256,7 @@ class ViewController: UIViewController, PrivacyKitDelegate {
     @objc func reset() {
         print("PrivacyKit: Reset")
 
-        PrivacyKit.shared.setPrivacy(accepted: false)
-        PrivacyKit.shared.setPrivacy(denied: false)
-        PrivacyKit.shared.setPrivacyRead(read: false)
-        PrivacyKit.shared.setTermsRead(read: false)
-
+        PrivacyKit.shared.resetState()
         self.updateLabels()
     }
 }

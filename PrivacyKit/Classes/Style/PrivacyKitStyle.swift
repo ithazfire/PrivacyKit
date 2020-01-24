@@ -41,19 +41,15 @@ public protocol PrivacyKitStyle {
 
 extension PrivacyKitStyle {
     public var paragraphAttrText: [NSAttributedString.Key: Any] {
-        get {
-            return [
-                NSAttributedString.Key.font: self.paragraphFont,
-                NSAttributedString.Key.foregroundColor: self.textColor
-            ]
-        }
+        [
+            NSAttributedString.Key.font: self.paragraphFont,
+            NSAttributedString.Key.foregroundColor: self.textColor
+        ]
     }
     public var highlightsAttrText: [NSAttributedString.Key: Any] {
-        get {
-            return [
-                NSAttributedString.Key.font: self.highlightFont,
-                NSAttributedString.Key.foregroundColor: self.textColor
-            ]
-        }
+        [
+            NSAttributedString.Key.font: self.highlightFont,
+            NSAttributedString.Key.foregroundColor: self.textColor
+        ]
     }
 }
