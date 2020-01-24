@@ -96,29 +96,5 @@ class TestPrivacyKitDelegate: QuickSpec {
             expect(delegateVC.presented).toEventually(beTrue())
             expect(delegateVC.presentedNoticeVC).toEventually(beAnInstanceOf(TestNoticeVC.self))
         }
-
-        it("runs completion when accepted") {
-            let delegateVC = TestDelegateVC()
-            let noticeVC = TestNoticeVC()
-
-            var success: Bool = false
-
-            delegateVC.requirePrivacy(privacyViewController: noticeVC) { _ in
-                success = true
-            }
-
-            noticeVC.acceptPrivacy()
-
-            expect(success).toEventually(beTrue())
-        }
-
-        it("doesn't run completion when no accept") {
-            let delegateVC = TestDelegateVC()
-            let noticeVC = TestNoticeVC()
-
-            delegateVC.requirePrivacy(privacyViewController: noticeVC) { _ in
-                fail("closure shouldn't run")
-            }
-        }
     }
 }

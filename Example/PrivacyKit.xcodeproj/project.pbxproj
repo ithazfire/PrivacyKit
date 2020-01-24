@@ -16,6 +16,7 @@
 		16D7A0BD23D429290073A805 /* PrivacyKitTopVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0BB23D428D40073A805 /* PrivacyKitTopVCTests.swift */; };
 		16D7A0BF23D42AC80073A805 /* PrivacyKitBottomVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0BE23D42AC80073A805 /* PrivacyKitBottomVCTests.swift */; };
 		16D7A0C123D42AD50073A805 /* PrivacyKitPrivacyVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7A0C023D42AD50073A805 /* PrivacyKitPrivacyVCTests.swift */; };
+		16F740A523DB63F9005005BC /* PrivacyKitDelegateCompTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F740A323DB63C9005005BC /* PrivacyKitDelegateCompTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		16D7A0BB23D428D40073A805 /* PrivacyKitTopVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitTopVCTests.swift; sourceTree = "<group>"; };
 		16D7A0BE23D42AC80073A805 /* PrivacyKitBottomVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitBottomVCTests.swift; sourceTree = "<group>"; };
 		16D7A0C023D42AD50073A805 /* PrivacyKitPrivacyVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitPrivacyVCTests.swift; sourceTree = "<group>"; };
+		16F740A323DB63C9005005BC /* PrivacyKitDelegateCompTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyKitDelegateCompTests.swift; sourceTree = "<group>"; };
 		1C4EFF76C324FFD5F142D5F5 /* Pods_PrivacyKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivacyKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A839033D7259A64A7EE4C2 /* Pods-PrivacyKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivacyKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-PrivacyKit_Example/Pods-PrivacyKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		43DBA13BBFBC97D64AA7C997 /* PrivacyKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PrivacyKit.podspec; path = ../PrivacyKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -142,6 +144,7 @@
 				16A6356D23D195B700FD7195 /* PrivacyKitStateTests.swift */,
 				16A6356A23D1949400FD7195 /* PrivacyKitDescriptionTests.swift */,
 				16489DF323D28E5B00DE414D /* PrivacyKitDelegateTests.swift */,
+				16F740A323DB63C9005005BC /* PrivacyKitDelegateCompTests.swift */,
 				16D7A0BB23D428D40073A805 /* PrivacyKitTopVCTests.swift */,
 				16D7A0BE23D42AC80073A805 /* PrivacyKitBottomVCTests.swift */,
 				16D7A0C023D42AD50073A805 /* PrivacyKitPrivacyVCTests.swift */,
@@ -424,6 +427,7 @@
 				16A6356C23D194BB00FD7195 /* PrivacyKitDescriptionTests.swift in Sources */,
 				16D7A0BF23D42AC80073A805 /* PrivacyKitBottomVCTests.swift in Sources */,
 				16489DF523D28F1300DE414D /* PrivacyKitDelegateTests.swift in Sources */,
+				16F740A523DB63F9005005BC /* PrivacyKitDelegateCompTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* PrivacyKitBasicsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

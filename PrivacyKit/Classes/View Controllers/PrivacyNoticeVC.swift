@@ -111,13 +111,13 @@ open class PrivacyNoticeVC: UIViewController, UITextViewDelegate {
     /** Action Functions */
     @objc open func acceptPrivacy() {
         PrivacyKit.shared.acceptPrivacy(self.privacyCompletion)
-        print("Accept completion should run: \(self.privacyCompletion).")
+
         self.dismiss(animated: true)
     }
 
     @objc open func denyPrivacy() {
         PrivacyKit.shared.denyPrivacy(self.privacyCompletion)
-        print("Deny completion should run: \(self.privacyCompletion).")
+
         self.dismiss(animated: true)
     }
 

@@ -122,7 +122,7 @@ class ViewController: UIViewController, PrivacyKitDelegate {
         super.viewDidAppear(animated)
 
         self.requirePrivacy(.bottom) { result in
-            switch (result) {
+            switch result {
             case .success(let privacyAccepted):
                 print("PrivacyKit: privacy was accepted? \(privacyAccepted)")
             case .failure(let error):
@@ -200,7 +200,7 @@ class ViewController: UIViewController, PrivacyKitDelegate {
 
         print("PrivacyKit: Presenting Top Notice")
         requirePrivacy(.top) { result in
-            switch (result) {
+            switch result {
             case .success(let privacyAccepted):
                 print("PrivacyKit.Top: privacy was accepted? \(privacyAccepted)")
             case .failure(let error):
@@ -215,7 +215,7 @@ class ViewController: UIViewController, PrivacyKitDelegate {
 
         print("PrivacyKit: Presenting Bottom Notice")
         requirePrivacy(.bottom) { result in
-            switch (result) {
+            switch result {
             case .success(let privacyAccepted):
                 print("PrivacyKit.Bottom: privacy was accepted? \(privacyAccepted)")
             case .failure(let error):
@@ -229,7 +229,7 @@ class ViewController: UIViewController, PrivacyKitDelegate {
         self.reset()
 
         requirePrivacy(.alert) { result in
-            switch (result) {
+            switch result {
             case .success(let privacyAccepted):
                 print("PrivacyKit.Alert: privacy was accepted? \(privacyAccepted)")
             case .failure(let error):
@@ -243,7 +243,7 @@ class ViewController: UIViewController, PrivacyKitDelegate {
         self.reset()
 
         requirePrivacy(privacyViewController: CustomNoticeVC()) { result in
-            switch (result) {
+            switch result {
             case .success(let privacyAccepted):
                 print("PrivacyKit.Custom: privacy was accepted? \(privacyAccepted)")
             case .failure(let error):
