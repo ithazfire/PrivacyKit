@@ -54,7 +54,7 @@ public extension PrivacyKitState where Self: PrivacyKit {
         privacyModel.privacyDenied = denied
         privacyModel.save()
     }
-    
+
     private func setPrivacyRead(read: Bool) {
         privacyModel.privacyPolicyRead = read
         privacyModel.save()
